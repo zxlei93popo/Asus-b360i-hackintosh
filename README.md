@@ -9,4 +9,4 @@
     * WLAN & Bluetooth: Boardcom 943602CS with Bluetooth 5.0  
 ### Fuctions
 - [x] CPU:Open turbo,frequencies from 1.2Ghz to 4.4Ghz(Max 1 core-turbo)  
-     GPU:RX570
+GPU:RX570
