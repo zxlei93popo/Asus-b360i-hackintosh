@@ -5,8 +5,10 @@
     * Motherboard: Asus ROG b360i-gaming  
     * Memory: Kingston Fury RGB DDR4 2666 8G*2  
     * Storage: Micron MX500 SATA SSD 500G  
-    * Graphic card: Sapphire RX570 itx (RX470D Golden Edition ITX Flash BIOS to RX570)  
+    * Graphic card: Sapphire RX570 4GB itx (RX470D Golden Edition ITX Flash BIOS to RX570)  
     * WLAN & Bluetooth: Boardcom 943602CS with Bluetooth 5.0  
 ### Fuctions
  * Normal Fuctions:
- 
+    * CPU:Open turbo,can run at varities of frequencies
+    * GPU:
+     
