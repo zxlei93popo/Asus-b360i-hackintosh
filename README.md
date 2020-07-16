@@ -23,5 +23,7 @@
   * WLAN
     - [x] ```2.4G Hotpot```
     - [x] ```5G Hotpot```
-  * Bluetooth
+  * Bluetooth:
     - [x] ```iPad & iPhone```
+* Audio:
+    - [x] ```Output voice```
