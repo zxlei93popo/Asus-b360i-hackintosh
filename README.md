@@ -39,4 +39,6 @@
     ```
     - [x] ```iMessage```
 * Other:
-    - [ ] ```About 3-4s black screen while system is loading```
+    ```diff
+    - About 3-4 seconds black screen while system is loading
+    ```
