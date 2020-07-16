@@ -44,7 +44,7 @@
     - About 3-4 seconds black screen while system is loading
     ```
 ## Software
-* Clover:
+* Clover Version:
   * r5107
 * System Version:
   * Catalina 10.15.5(19F101)
