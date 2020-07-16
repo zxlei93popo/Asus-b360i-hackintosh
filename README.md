@@ -9,6 +9,6 @@
     * WLAN & Bluetooth: Boardcom 943602CS with Bluetooth 5.0  
 ### Fuctions
  * Normal Fuctions:
-    * CPU:Open turbo,can run at varities of frequencies
-    * GPU:
+     * CPU:Open turbo,can run at varities of frequencies
+     * GPU:
      
