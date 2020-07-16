@@ -36,7 +36,7 @@
     - [x] ```AirDrop```
     - [x] ```Facetime```
     ```diff
-    ! 中国大陆地区不可用
+    ! Facetime在中国大陆地区不可用
     ```
     - [x] ```iMessage```
 * 其他:
