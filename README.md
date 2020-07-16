@@ -40,12 +40,13 @@
     ! Regions where can run Facetime excludes the Chinese mainland
     ```
     - [x] ```iMessage```
-* Other:
+* Unnatrual Fuctions:
     ```diff
     - About 3-4 seconds black screen while system is loading
     ```
 ## Software
-* Clover:
+* Clover Version:
   * r5107
 * System Version:
-  * Catalina 10.15.5(19F101)
+  * Mac OS X Catalina 10.15.5(19F101)
+  * Windows10 Pro 1909 x64(June 2020 updated)
