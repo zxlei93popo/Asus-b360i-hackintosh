@@ -8,4 +8,5 @@
     * Graphic card: Sapphire RX570 4GB itx (RX470D Golden Edition ITX Flash BIOS to RX570)  
     * WLAN & Bluetooth: Boardcom 943602CS with Bluetooth 5.0  
 ### Fuctions
-- [x] 需求分析
+- [x] CPU:Open turbo,frequencies from 1.2Ghz to 4.4Ghz(Max 1 core-turbo)
+- [x] GPU:RX570
