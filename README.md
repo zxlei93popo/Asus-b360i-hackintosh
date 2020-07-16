@@ -38,4 +38,5 @@
     ! Region exclude the Chinese mainland
     ```
     - [x] ```iMessage```
-
+* Other:
+    - [] About 3-4s black screen while system is loading
