@@ -13,6 +13,7 @@
   - [x] Frequency Steps
 * GPU:
   * RX570
-    - [x] HDMI @ 3840x2160 DP @ 3840x2160
+    - [x] HDMI @3840x2160  DP @3840x2160
   * Intel UHD 630
-    
+    - [x] H264 Hardware Decode
+    - [x] HEVC Hardware Decode
