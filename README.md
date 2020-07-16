@@ -9,7 +9,7 @@
     * WLAN & Bluetooth: Boardcom 943602CS with Bluetooth 5.0  
 ### Fuctions
 * CPU:
-- [x] Turbo
-- [x] Frequency Step
+  - [x] Turbo
+  - [x] Frequency Step
 * GPU:
     
