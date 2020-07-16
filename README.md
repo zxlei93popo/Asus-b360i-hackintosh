@@ -33,5 +33,5 @@
     - [x] ```Wake by Power button```
 * Special Fuctions:
     - [x] ```AirDrop```
-    - [x] ```diff + Facetime```
+    - [x] ```Facetime```  dsdsa
     - [x] ```iMessage```
