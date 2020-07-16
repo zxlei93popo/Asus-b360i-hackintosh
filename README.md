@@ -10,6 +10,6 @@
 ### Fuctions
  * Normal Fuctions:
 ```diff
-     * CPU:Open turbo,can run at varities of frequencies
-     * GPU:
+   + CPU:Open turbo,can run at varities of frequencies
+   + GPU:
 ``` 
