@@ -10,6 +10,8 @@
 ### Fuctions
 * CPU:
   - [x] Turbo
-  - [x] Frequency Step
+  - [x] Frequency Steps
 * GPU:
+  * RX570
+  * Intel UHD 630
     
