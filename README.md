@@ -34,7 +34,7 @@
 * Special Fuctions:
     - [x] ```AirDrop```
     - [x] ```Facetime```
-          ```diff
-             ! exclude the Chinese mainland
-          ```
     - [x] ```iMessage```
+    ```diff
+      ! `exclude Chinese mainland`
+    ```
