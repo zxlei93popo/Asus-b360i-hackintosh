@@ -6,7 +6,7 @@
     * 主板: 华硕 ROG b360i-gaming  
     * 内存: 金士顿 Fury RGB DDR4 2666 8Gx2  
     * 硬盘: 镁光 MX500 SATA SSD 500G  
-    * 显卡: 蓝宝石 RX570 4GB itx (RX470D Golden Edition ITX Flash BIOS to RX570)  
+    * 显卡: 蓝宝石 RX570 4GB itx (RX470D 黄金版刷BIOS)  
     * 无线网络 & 蓝牙: 博通 943602CS & 蓝牙 5.0
 ## 功能
 * CPU:
