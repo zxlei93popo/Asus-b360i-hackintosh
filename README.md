@@ -9,8 +9,9 @@
     * WLAN & Bluetooth: Boardcom 943602CS with Bluetooth 5.0  
 ### Fuctions
 * CPU:
-  - [x] Turbo
-  - [x] Frequency Steps
+  * `Intel i5 9500`
+    - [x] Turbo
+    - [x] Frequency Steps
 * GPU:
   * `RX570`
     - [x] HDMI @3840x2160  DP @3840x2160
