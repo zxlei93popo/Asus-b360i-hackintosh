@@ -19,3 +19,9 @@
   * `Intel UHD 630`
     - [x] H264 Hardware Decode
     - [x] HEVC Hardware Decode
+* WLAN & Bluetooth:
+  * `WLAN`
+    - [x] 2.4G Hotpot
+    - [x] 5G Hotpot
+  * `Bluetooth`
+    - [x] iPad & iPhone
