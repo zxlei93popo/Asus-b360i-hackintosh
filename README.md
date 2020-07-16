@@ -27,3 +27,9 @@
     - [x] ```iPad & iPhone```
 * Audio:
     - [x] ```Output voice```
+* Sleep:
+    - [x] ```Wake by USB devices```
+    - [x] ```Wake by power button```
+* Special Fuctions:
+    - [x] ```AirDrop```
+    - [x] ```Facetime```
