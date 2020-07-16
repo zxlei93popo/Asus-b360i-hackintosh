@@ -1,7 +1,7 @@
 ## Asus-B360i-Hackintosh
     Nearly 99% perfective hackintosh with Asus ROG B360i-Gaming motherboard
  * [README(中文版)](./README(中文版).md)
- * [guide](./guide.md)
+ * [Guide](./guide.md)
 ## My DeviceInfo
     * CPU: Intel i5-9500 (6 Cores/6 Threads) 3.0Ghz  
     * Motherboard: Asus ROG b360i-gaming  
