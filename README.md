@@ -33,7 +33,6 @@
     - [x] ```Wake by Power button```
 * Special Fuctions:
     - [x] ```AirDrop```
-    - [x] ```Facetime```
+    - [x] ```Facetime```  ```diff ! exclude the Chinese mainland```
     - [x] ```iMessage```
 
-+ 123
