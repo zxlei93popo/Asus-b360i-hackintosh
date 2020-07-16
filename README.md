@@ -10,7 +10,7 @@
 ### Fuctions
 * CPU:
   * `Intel i5 9500`
-    - [x] Turbo
+    - [x] ```Turbo```
     - [x] Frequency Steps
 * GPU:
   * `RX570`
