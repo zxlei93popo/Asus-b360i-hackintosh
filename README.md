@@ -1,4 +1,4 @@
-# Asus-B360i-Hackintosh
+## Asus-B360i-Hackintosh
     Nearly 99% perfective hackintosh with Asus ROG B360i-Gaming motherboard
  * [README(中文版)](./README(中文版).md)
 ## My DeviceInfo
