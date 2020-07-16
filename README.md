@@ -9,6 +9,5 @@
     * WLAN & Bluetooth: Boardcom 943602CS with Bluetooth 5.0  
 ### Fuctions
 ```diff
-+ CPU:Open turbo,can run at varities of frequencies
-+ GPU:
+- [x]CPU: Open turbo,can
 ```
