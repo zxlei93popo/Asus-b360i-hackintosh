@@ -1,6 +1,6 @@
 # 华硕-B360i-黑苹果
     99%完美的华硕b360i主板黑苹果
-   [README](./README.md)
+    [README](./README.md)
 ## 我的设备信息
     * CPU: Intel i5-9500 (6 Cores/6 Threads) 3.0Ghz  
     * 主板: 华硕 ROG b360i-gaming  
