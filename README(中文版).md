@@ -3,11 +3,11 @@
   * [README](./README.md)
 ## 我的设备信息
     * CPU: Intel i5-9500 (6 Cores/6 Threads) 3.0Ghz  
-    * 主板: Asus ROG b360i-gaming  
-    * 内存: Kingston Fury RGB DDR4 2666 8Gx2  
-    * 硬盘: Micron MX500 SATA SSD 500G  
-    * 显卡: Sapphire RX570 4GB itx (RX470D Golden Edition ITX Flash BIOS to RX570)  
-    * 无线网络 & 蓝牙: Boardcom 943602CS with Bluetooth 5.0  
+    * 主板: 华硕 ROG b360i-gaming  
+    * 内存: 金士顿 Fury RGB DDR4 2666 8Gx2  
+    * 硬盘: 镁光 MX500 SATA SSD 500G  
+    * 显卡: 蓝宝石 RX570 4GB itx (RX470D Golden Edition ITX Flash BIOS to RX570)  
+    * 无线网络 & 蓝牙: 博通 943602CS with Bluetooth 5.0  
 ## 功能
 * CPU:
   * Intel i5 9500
