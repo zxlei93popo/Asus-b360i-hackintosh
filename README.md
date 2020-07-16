@@ -13,6 +13,6 @@
   - [x] Frequency Steps
 * GPU:
   * RX570
-    - [x] HDMI @ 3840*2160 DP @ 3840*2160
+    - [x] HDMI 
   * Intel UHD 630
     
