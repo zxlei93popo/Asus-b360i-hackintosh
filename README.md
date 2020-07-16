@@ -48,3 +48,4 @@
   * r5107
 * System Version:
   * Catalina 10.15.5(19F101)
+  * Windows10 Pro 64bit(June,2020 updated)
