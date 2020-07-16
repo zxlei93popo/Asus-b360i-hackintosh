@@ -11,17 +11,17 @@
 * CPU:
   * `Intel i5 9500`
     - [x] ```Turbo```
-    - [x] Frequency Steps
+    - [x] ```Frequency Steps```
 * GPU:
   * `RX570`
-    - [x] HDMI @3840x2160
-    - [x] DP @3840x2160
+    - [x] ```HDMI @3840x2160```
+    - [x] ```DP @3840x2160```
   * `Intel UHD 630`
-    - [x] H264 Hardware Decode
-    - [x] HEVC Hardware Decode
+    - [x] ```H264 Hardware Decode```
+    - [x] ```HEVC Hardware Decode```
 * WLAN & Bluetooth:
   * `WLAN`
-    - [x] 2.4G Hotpot
-    - [x] 5G Hotpot
+    - [x] ```2.4G Hotpot```
+    - [x] ```5G Hotpot```
   * `Bluetooth`
-    - [x] iPad & iPhone
+    - [x] ```iPad & iPhone```
