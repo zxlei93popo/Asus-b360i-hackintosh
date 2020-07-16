@@ -36,7 +36,7 @@
     - [x] ```AirDrop```
     - [x] ```Facetime```
     ```diff
-    ! Regions where can run Facetime excludes the Chinese mainland
+    ! **Regions where can run Facetime excludes the Chinese mainland**
     ```
     - [x] ```iMessage```
 * Unnatrual Fuctions:
