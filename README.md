@@ -35,7 +35,7 @@
     - [x] ```AirDrop```
     - [x] ```Facetime```
     ```diff
-    ! exclude the Chinese mainland
+    ! Region exclude the Chinese mainland
     ```
     - [x] ```iMessage```
 
