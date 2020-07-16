@@ -25,11 +25,13 @@
     - [x] ```5G Hotpot```
   * Bluetooth:
     - [x] ```iPad & iPhone```
+    - [x] ```Bluetooth Earphone```
 * Audio:
     - [x] ```Output voice```
 * Sleep:
     - [x] ```Wake by USB devices```
-    - [x] ```Wake by power button```
+    - [x] ```Wake by Power button```
 * Special Fuctions:
     - [x] ```AirDrop```
     - [x] ```Facetime```
+    - [x] ```iMessage```
