@@ -36,5 +36,5 @@
     - [x] ```Facetime```
     - [x] ```iMessage```
     ```diff
-      `!` exclude the Chinese mainland
+      `!` `exclude the Chinese mainland`
     ```
