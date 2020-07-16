@@ -43,3 +43,8 @@
     ```diff
     - About 3-4 seconds black screen while system is loading
     ```
+## Software
+* Clover:
+  * r5107
+* System Version:
+  * Catalina 10.15.5(19F101)
