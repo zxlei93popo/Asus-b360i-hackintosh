@@ -59,9 +59,11 @@ Don't
      Can Support
      !  1.Nvidia GPU Card with Maxwell cores(such as GTX970 GTX1060)(need WebDrive and OS version up to 10.13.6)
      !  2.Radeon RX5700XT(may need black screen patch)
+        3.Radeon RX460/RX470/RX480/RX560/RX570/RX580(2304SP)(miner card)
      Don't
-     -  1.Radeon RX580 2048SP(Deviceid isn't 1002-67DF)
+     -  1.Radeon RX580 2048SP(device-id isn't 1002-67DF)
      -  2.Nvidia GTX16 series and RTX20 series
      #  GPU which not mentioned above please search by yourself
      ```
 #### Storage
+
