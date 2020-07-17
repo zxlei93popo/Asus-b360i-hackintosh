@@ -15,4 +15,25 @@
   2. [**reddit**](https://www.reddit.com/r/hackintosh/)
   3. [**youtube**](https://www.youtube.com)
 * ```Hackintosh Step```
-[Hackintosh](./EFI/APPLE/Hackintosh Step.png)
+
+## Choose Device
+###  CPU
+```diff
+Recommand
+---
++   1.Intel 9th generation Core i3/i5/i7/i9 series(Coffee Lake)
++   2.Intel 8th generation Core i3/i5/i7 series(Coffee Lake)
++   3.Intel 4th generation Core i3/i5/i7 series & Intel Xeon E3-12XXV3 series(Hasewell)
++   4.Intel 3rd generation Core i3/i5/i7 series & Intel Xeon E3-12XXV2 series(Ivy Bridge)
+---
+---
+Can Support
+---
+!   1.Intel Pentium G Series(such as G2030 G3260)
+!   2.Intel Core E series(such as E8400 E5800) & Intel Core Q series(such as Q9600)
+!   3.Intel Celeron G Series(such as G1840)
+!   4.AMD Ryzen 1st/2nd/3rd series (Only Support OC BOOT)
+---
+Don't
+```
+
