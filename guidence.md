@@ -1,7 +1,31 @@
 ## Guidence
 ***
 ```This guidence will tell you how to make a perfective hackintosh device```
-## Before Start
+## Contents
+* [Before Start](#BeforeStart)
+* [References](#References)
+* [Choose Device](#Choose-Device)
+  * [Desktop PC](#Desktop-PC)
+    * [CPU](#CPU)
+    * [GPU](#GPU)
+    * [Motherboard](#Motherboard)
+    * [Stroage](#Storage)
+    * [Memory](#Memory)
+    * [WLAN Card & Bluetooth](#WLAN-Card(&Bluetooth))
+    * [Barebone Computer](#BareboneComputer)
+  * [Laptop](#Laptop)
+    * [CPU](#Mobile-CPU)
+    * [GPU](#Mobile-GPU)
+    * [Motherboard](#Mobile-Motherboard)
+    * [Mobile Storage](#Mobile-Storage)
+    * [Laptop Memory](#Laptop-Memory)
+    * [Laptop WLAN Card & Bluetooth](#Laptop-WLAN-Card(&Bluetooth))
+* [BIOS Settings](#BIOS-Settings)
+  * [Enable](#Enable)
+  * [Disable](#Disable)
+* [Disk Partition](#Disk-Partition)
+
+## BeforeStart
 ```diff
 !   1. Be Patient
 !   2. Studious and come up with a solution via all ways you can find(Search Engine,BBS,YouTube etc.)
@@ -9,15 +33,16 @@
 +   1.Buy a Mac
 +   2.Go to reddit and pay some money
 ```
-## Reference
+## References
 * ```tutorial```
   1. [**tonymacx86**](https://www.tonymacx86.com/)
   2. [**reddit**](https://www.reddit.com/r/hackintosh/)
   3. [**youtube**](https://www.youtube.com)
 * ```Hackintosh Step```
 
-## Choose Device
-### Desktop PC
+## Choose-Device
+```A good device choice is half the battle```
+### Desktop-PC
 #### CPU
 ```diff
 Recommand
@@ -103,11 +128,15 @@ Don't
 Recommand
 +   1.Samsung 970 EVO(NVME)
 +   2.Western Data SN730(NVME)
-+   3.Micron MX500(SATA)
++   3.KIOXIA RC10 (NVME)
++   4.Micron MX500(SATA)
++   5.Samsung 860 EVO(SATA)
++   6.KIOXIA TC10 (SATA)
 Don't
 -   1.Samsung 970 EVO Plus(NVME)
 -   2.Samsung PM981/PM981A(NVME)
 -   3.Intel Optane Series
+-   4.Intel 660P QLC(NVME)
 ```
 #### Memory
 ```diff
@@ -120,7 +149,7 @@ Don't
 -   2.Corsair
 -   3.non-brand(such as Cuso)
 ```
-#### WLAN Card & Bluetooth
+#### WLAN-Card(&Bluetooth)
 ```diff
 Recommand
 +   1.Boardcom 943602CS (2.4G/450Mbps 5G/1300Mbps Bluetooth 4.2)
@@ -133,24 +162,56 @@ Don't
 -   2.Intel AC series(such as 9260ac 3160ac)
 #  WLAN Card which not mentioned above please search by yourself
 ```
-#### Barebone Computer
+#### BareboneComputer
 ```diff
 +   1.Intel NUC8 Series
 +   2.AsRock Deskmini310 Series
 ```
 ### Laptop
   * [LTS Laptop List](https://blog.daliansky.net/Hackintosh-long-term-maintenance-model-checklist.html)
-#### CPU
+#### Mobile-CPU
 ```diff
 +   Intel Core i3/i5/i7 mobile series
 -   Intel Atom mobile series
 #   CPU which not mentioned above please search by yourself
 ```
-#### GPU
+#### Mobile-GPU
 ```diff
 -   Nearly all AMD or Nvidia mobile GPU are not supported
 -   Intel 10th generation(Ice Lake) mobile GPU are not supported
 +   Intel GMA/HD/UHD series mobile GPU(integrated)
 +   Nvidia Geforce GT320m(individual)
 +   Nvidia Geforce 9400m(individual)
+#   GPU which not mentioned above please search by yourself
 ```
+#### Mobile-Motherboard
+* ``` depends on your CPU ```
+#### Mobile-Storage
+* [Desktop PC Storage)](#Storage)
+#### Laptop-Memory
+```diff
+-   some LPDDR4X model memorys may cause crash
+```
+#### Laptop-WLAN-Card(&Bluetooth)
+* [Desktop PC WLAN-Card(&Bluetooth)](#WLAN-Card(&Bluetooth))
+## BIOS-Settings
+### Enable
+```diff
+!   some motherboard may not contain these options,if your installation are normal,you can ignore that,or you need patch them 
++   1.VT-x
++   2.Exective Disable bit
++   3.iGPU(only use iGPU or multi-monitor) / IGFX
++   4.Above 4G decoding
++   5.XHCI-Handoff
+```
+### Disable
+```diff
+-   1.Fast Boot
+-   2.CSM
+-   3.CFG Lock
+-   4.Secure-Boot
+-   5.VT-d
+-   6.Boot Option -- OS Type -- Other
+-   7.Onboard Wi-Fi and Bluetooth
+```
+## Disk-Partition
