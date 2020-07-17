@@ -57,6 +57,7 @@ Don't
      +  1.Radeon RX5500XT/RX5600XT/RX5700
      +  2.Radeon RX560XT/RX590
      +  3.Nvidia GPU Card with Kepler architect(such as GTX760 GTX690)
+     +  4.Intel HD/UHD series desktop GPU(integrated,exclude 10th generation)
      Can Support
      !  1.Nvidia GPU Card with Maxwell architect(such as GTX970 GTX1060)(need WebDrive and OS version up to 10.13.6)
      !  2.Radeon RX5700XT(may need black screen patch)
@@ -117,7 +118,7 @@ Recommand
 Don't
 -   1.Samsung
 -   2.Corsair
--   3.non-brand(such as cuso)
+-   3.non-brand(such as Cuso)
 ```
 #### WLAN Card & Bluetooth
 ```diff
@@ -126,7 +127,7 @@ Recommand
 +   2.Boardcom 94360CD  (Fenvi T919) (2.4G/450Mbps 5G/1300Mbps Bluetooth 4.0)
 +   3.Boardcom 94360CS2 (2.4G/450Mbps 5G/867Mbps Bluetooth 4.0)
 Can Support
-!   1.Boardcom 94350ZAE(DW1820A)(2.4G/300Mbps 5G/867Mbps Bluetooth 4.1)
+!   1.Boardcom 94350ZAE (DW1820A)(2.4G/300Mbps 5G/867Mbps Bluetooth 4.1)
 Don't
 -   1.Intel AX series(such as AX200)
 -   2.Intel AC series(such as 9260ac 3160ac)
@@ -140,4 +141,16 @@ Don't
 ### Laptop
   * [LTS Laptop List](https://blog.daliansky.net/Hackintosh-long-term-maintenance-model-checklist.html)
 #### CPU
-
+```diff
++   Intel Core i3/i5/i7 mobile series
+-   Intel Atom mobile series
+#   CPU which not mentioned above please search by yourself
+```
+#### GPU
+```diff
+-   Nearly all mobile AMD or Nvidia mobile GPU are not supported
+-   Intel 10th generation(Ice Lake) mobile GPU are not supported
++   Intel GMA/HD/UHD series mobile GPU(integrated)
++   Nvidia Geforce G320m(individual)
++   Nvidia Geforce 9400m(individual)
+```
