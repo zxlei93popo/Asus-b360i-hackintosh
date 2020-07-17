@@ -128,14 +128,14 @@ Don't
 Recommand
 +   1.Samsung 970 EVO(NVME)
 +   2.Western Data SN730(NVME)
-+   3.KIOXIA RC10 (NVME)
++   3.KIOXIA RC10(NVME)
 +   4.Micron MX500(SATA)
 +   5.Samsung 860 EVO(SATA)
-+   6.KIOXIA TC10 (SATA)
++   6.KIOXIA TC10(SATA)
 Don't
 -   1.Samsung 970 EVO Plus(NVME)
 -   2.Samsung PM981/PM981A(NVME)
--   3.Intel Optane Series
+-   3.Intel Optane Series(NVME)
 -   4.Intel 660P QLC(NVME)
 ```
 #### Memory
