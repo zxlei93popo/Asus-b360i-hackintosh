@@ -40,7 +40,7 @@
   3. [**youtube**](https://www.youtube.com)
 * ```Hackintosh Step```
 ---
-  * ![Hackintosh Step](./EFI/APPLE/Hackintosh-Step.jpg)
+  * ![Hackintosh Step](./EFI/APPLE/Hackintosh-Step.png)
 ---
 ## Choose-Device
 ```A good device choice is half the battle```
