@@ -62,4 +62,6 @@ Don't
      Don't
      -  1.Radeon RX580 2048SP(Deviceid isn't 1002-67DF)
      -  2.Nvidia GTX16 series and RTX20 series
-
+     #  GPU which not mentioned above please search by yourself
+     ```
+#### Storage
