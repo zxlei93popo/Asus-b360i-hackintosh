@@ -151,6 +151,6 @@ Don't
 -   Nearly all mobile AMD or Nvidia mobile GPU are not supported
 -   Intel 10th generation(Ice Lake) mobile GPU are not supported
 +   Intel GMA/HD/UHD series mobile GPU(integrated)
-+   Nvidia Geforce G320m(individual)
++   Nvidia Geforce GT320m(individual)
 +   Nvidia Geforce 9400m(individual)
 ```
