@@ -219,28 +219,33 @@ Don't
 ```
 ## Disk-Partition
 ```diff
-!   We assume that you have a new computer.if you already have a computer with windows operating system,you can skip 'Windows Installtion'
+!   We assume that you have a new computer.
+!   if you already have a computer with windows operating system,you can skip 'Windows Installtion'
 ```
-*  Windows Installtion  
-    * ```Download OS image```  
-        * [Windows 10 Consumer X64](ed2k://|file|cn_windows_10_consumer_editions_version_1909_updated_jan_2020_x64_dvd_47161f17.iso|5417457664|274FEBA5BF0C874C291674182FA9C851|/)(```memory size: > 4G```)
-        * [Windows 10 Consumer X86](ed2k://|file|cn_windows_10_consumer_editions_version_1909_updated_jan_2020_x86_dvd_9c50652f.iso|3884539904|0F2E887F2845BCD5C61E99E74D717287|/)(```memory size: <= 4G```)
-    * ```Download UltraISO```
-        * [UltraISO 9.72](https://pan.baidu.com/s/1BYKaktRlW_fiEIVJ4Tju8w)  
-          **Code: en9v**  
-    * ```Loading image```  
-    ```  
-         1. Open 'UltraISO.exe' by administator mode
-         2. Press F6
-         3. Choose image file
-         4. Press load(加载)
-    ```
-      ![load image](./EFI/APPLE/Diskpartition/1.png)
-    ```
-         5.Choose start(启动)
-         6.Write harddisk image(写入硬盘映像)
-    ```
-      ![write image](./EFI/APPLE/Diskpartition/2.png)
-    ```diff
-    !    You MUST BACKUP your data BEFORE the next option,your flash disk WILL BE FORMATTED
-         7.Choose write(写入) 
+### Windows Installtion  
+  * ```Download OS image```  
+      * [Windows 10 Consumer X64](ed2k://|file|cn_windows_10_consumer_editions_version_1909_updated_jan_2020_x64_dvd_47161f17.iso|5417457664|274FEBA5BF0C874C291674182FA9C851|/)(```memory size: > 4G```)
+      * [Windows 10 Consumer X86](ed2k://|file|cn_windows_10_consumer_editions_version_1909_updated_jan_2020_x86_dvd_9c50652f.iso|3884539904|0F2E887F2845BCD5C61E99E74D717287|/)(```memory size: <= 4G```)
+  * ```Download UltraISO```
+      * [UltraISO 9.72](https://pan.baidu.com/s/1BYKaktRlW_fiEIVJ4Tju8w)  
+        **Code: en9v**  
+  * ```Loading image```  
+  ```  
+        1. Open 'UltraISO.exe' by administator mode
+        2. Press F6
+        3. Choose image file
+        4. Press load(加载)
+  ```
+    ![load image](./EFI/APPLE/Diskpartition/1.png)
+  ```
+        5.Choose start(启动)
+        6.Write harddisk image(写入硬盘映像)
+  ```
+    ![write image](./EFI/APPLE/Diskpartition/2.png)
+  ```diff
+  !    You MUST BACKUP your data BEFORE the next option,your flash disk WILL BE FORMATTED
+        7.Choose write(写入)
+        8.Restart Computer and wait for boot
+        9.Follow Windows Installtion Guide and finish it
+  ```
+* ```Now your computer are running Windows 10```
