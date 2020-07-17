@@ -3,7 +3,7 @@
 ```This guidence will tell you how to make a perfective hackintosh device```
 ## Before Start
 ```diff
-!   1. Be Patient !!!
+!   1. Be Patient
 !   2. Studious and come up with a solution via all ways you can find(Search Engine,BBS,YouTube etc.)
 - When you lose a patient:
 +   1.Buy a Mac
