@@ -10,7 +10,7 @@
     * Memory: Kingston Fury RGB DDR4 2666 8Gx2  
     * Storage: Micron MX500 SATA SSD 500G  
     * Graphic card: Sapphire RX570 4GB itx (RX470D Golden Edition ITX Flash BIOS to RX570)  
-    * WLAN & Bluetooth: Boardcom 943602CS with Bluetooth 5.0  
+    * WLAN & Bluetooth: Boardcom 943602CS with Bluetooth 4.2  
 ---
 ## Fuctions
 * CPU:
@@ -37,7 +37,7 @@
     - [x] ```Wake by USB devices```
     - [x] ```Wake by Power button```
 * Special Fuctions:
-    - [x] ```AirDrop```
+    - [x] ```AirDrop & Handoff```
     - [x] ```Facetime```
     ```diff
     ! Regions where can run Facetime excludes the Chinese mainland

@@ -10,7 +10,7 @@
     * 内存: 金士顿 Fury RGB DDR4 2666 8Gx2  
     * 硬盘: 镁光 MX500 SATA SSD 500G  
     * 显卡: 蓝宝石 RX570 4GB itx (RX470D 黄金版刷BIOS)  
-    * 无线网络 & 蓝牙: 博通 943602CS & 蓝牙 5.0
+    * 无线网络 & 蓝牙: 博通 943602CS & 蓝牙 4.2
 ***
 ## 功能
 * CPU:
@@ -37,7 +37,7 @@
     - [x] ```通过USB设备唤醒```
     - [x] ```通过电源键唤醒```
 * 特色功能:
-    - [x] ```AirDrop```
+    - [x] ```AirDrop & Handoff```
     - [x] ```Facetime```
     ```diff
     ! Facetime在中国大陆地区不可用

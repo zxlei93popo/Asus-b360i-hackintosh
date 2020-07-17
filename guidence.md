@@ -29,8 +29,9 @@ Can Support
 !   1.Intel Pentium G Series(such as G2030 G3260)
 !   2.Intel Core E series(such as E8400 E5800) & Intel Core Q series(such as Q9600)
 !   3.Intel Celeron G Series(such as G1840)
-!   4.AMD Ryzen 1st/2nd/3rd series
-!   5.AMD A Series APU(such as A10-7800 A10-9600)
+!   4.Intel 10th generation Core i3/i5/i7/i9 series(Comet Lake)(only support OC boot)
+!   5.AMD Ryzen 1st/2nd/3rd series
+!   6.AMD A Series APU(such as A10-7800 A10-9600)
 Don't
 -   1.Intel Atom Series(such as D525 N330)
 -   2.AMD Ryzen APU(such as 2200G 3400G)
@@ -79,7 +80,7 @@ Don't
      Don't
      -  1.Soyo
      -  2.OEM
-    ```
+     ```
   2. Chipset
      ```diff
      Recommand
@@ -104,7 +105,7 @@ Recommand
 +   3.Micron MX500(SATA)
 Don't
 -   1.Samsung 970 EVO Plus(NVME)
--   2.Samsung PM981/PM981a(NVME)
+-   2.Samsung PM981/PM981A(NVME)
 -   3.Intel Optane Series
 ```
 #### Memory
@@ -118,7 +119,25 @@ Don't
 -   2.Corsair
 -   3.non-brand(such as cuso)
 ```
-#### WLAN Card
+#### WLAN Card & Bluetooth
 ```diff
 Recommand
-+   1.
++   1.Boardcom 943602CS (2.4G/450Mbps 5G/1300Mbps Bluetooth 4.2)
++   2.Boardcom 94360CD  (Fenvi T919) (2.4G/450Mbps 5G/1300Mbps Bluetooth 4.0)
++   3.Boardcom 94360CS2 (2.4G/450Mbps 5G/867Mbps Bluetooth 4.0)
+Can Support
+!   1.Boardcom 94350ZAE(DW1820A)(2.4G/300Mbps 5G/867Mbps Bluetooth 4.1)
+Don't
+-   1.Intel AX series(such as AX200)
+-   2.Intel AC series(such as 9260ac 3160ac)
+#  WLAN Card which not mentioned above please search by yourself
+```
+#### Barebone Computer
+```diff
++   1.Intel NUC8 Series
++   2.AsRock Deskmini310 Series
+```
+### Laptop
+  * [LTS Laptop List](https://blog.daliansky.net/Hackintosh-long-term-maintenance-model-checklist.html)
+#### CPU
+
