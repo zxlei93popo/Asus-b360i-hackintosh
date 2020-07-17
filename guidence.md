@@ -15,3 +15,4 @@
   2. [**reddit**](https://www.reddit.com/r/hackintosh/)
   3. [**youtube**](https://www.youtube.com)
 * ```Hackintosh Step```
+[Hackintosh](./EFI/APPLE/Hackintosh Step.png)
