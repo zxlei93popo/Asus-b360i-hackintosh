@@ -39,7 +39,9 @@
   2. [**reddit**](https://www.reddit.com/r/hackintosh/)
   3. [**youtube**](https://www.youtube.com)
 * ```Hackintosh Step```
-
+---
+  * ![Hackintosh Step](./EFI/APPLE/Hackintosh-Step.jpg)
+---
 ## Choose-Device
 ```A good device choice is half the battle```
 ### Desktop-PC
