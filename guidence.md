@@ -14,4 +14,4 @@
   1. [**tonymacx86**](https://www.tonymacx86.com/)
   2. [**reddit**](https://www.reddit.com/r/hackintosh/)
   3. [**youtube**](https://www.youtube.com)
-## Choose Device
+* ```Hackintosh Step```
