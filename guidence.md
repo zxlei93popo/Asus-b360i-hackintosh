@@ -185,7 +185,7 @@ Don't
 #   GPU which not mentioned above please search by yourself
 ```
 #### Mobile-Motherboard
-* ``` depends on your CPU ```
+* ``` Depends on your CPU ```
 #### Mobile-Storage
 * [Desktop PC Storage)](#Storage)
 #### Laptop-Memory
