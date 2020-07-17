@@ -18,7 +18,7 @@
 
 ## Choose Device
 ### Desktop PC
-####  CPU
+#### CPU
 ```diff
 Recommand
 +    1.Intel 9th generation Core i3/i5/i7/i9 series(Coffee Lake)
@@ -55,9 +55,9 @@ Don't
      Recommand
      +  1.Radeon RX5500XT/RX5600XT/RX5700
      +  2.Radeon RX560XT/RX590
-     +  3.Nvidia GPU Card with Kepler cores(such as GTX760 GTX690)
+     +  3.Nvidia GPU Card with Kepler architect(such as GTX760 GTX690)
      Can Support
-     !  1.Nvidia GPU Card with Maxwell cores(such as GTX970 GTX1060)(need WebDrive and OS version up to 10.13.6)
+     !  1.Nvidia GPU Card with Maxwell architect(such as GTX970 GTX1060)(need WebDrive and OS version up to 10.13.6)
      !  2.Radeon RX5700XT(may need black screen patch)
      !  3.Radeon RX460/RX470/RX480/RX560/RX570/RX580(2304SP)(miner card)
      Don't
@@ -65,5 +65,60 @@ Don't
      -  2.Nvidia GTX16 series and RTX20 series
      #  GPU which not mentioned above please search by yourself
      ```
+#### Motherboard
+  1. Brand
+     ```diff
+     Recommand
+     +  1.Gigabyte
+     +  2.Asus
+     +  3.AsRock
+     +  4.MSI
+     Can Support
+     !  1.Onda
+     !  2.Colorful
+     Don't
+     -  1.Soyo
+     -  2.OEM
+    ```
+  2. Chipset
+     ```diff
+     Recommand
+     +  1.Z390 Chipset
+     +  2.Z370 Chipset
+     +  3.B85 Chipset
+     Can support
+     !  1.B360 Chipset
+     !  2.H310 Chipset
+     !  3.B75 Chipset
+     !  4.B450 Chipset
+     !  5.H310 Chipset
+     Don't
+     -  Old Chipset(such as Intel 965 AMD A55)
+     #  Chipset which not mentioned above please search by yourself
+     ```
 #### Storage
-
+```diff
+Recommand
++   1.Samsung 970 EVO(NVME)
++   2.Western Data SN730(NVME)
++   3.Micron MX500(SATA)
+Don't
+-   1.Samsung 970 EVO Plus(NVME)
+-   2.Samsung PM981/PM981a(NVME)
+-   3.Intel Optane Series
+```
+#### Memory
+```diff
+Recommand
++   1.KingSton
++   2.Micron
++   3.KLEVV
+Don't
+-   1.Samsung
+-   2.Corsair
+-   3.non-brand(such as cuso)
+```
+#### WLAN Card
+```diff
+Recommand
++   1.
