@@ -263,17 +263,17 @@ Don't
 ```
 * ```Windows Partition``` 
 ```
-      1.Partition(分区) --- create new partition
+      1.Partition(分区) --- create new partition(创建新分区)
 ```
 ![create new partition](./EFI/APPLE/Diskpartition/7.png)
 ```diff
       2.File system(文件系统类型) --- NTFS
       3.Input the size you want
-      4.Press 'Ok'
+      4.Press 'Ok'(确定)
       5.Press F8(Save partition table)(保存分区表)
       6.Partition --- format current partition(格式化当前分区)
 +     Recommand cluster size is 4096 bytes
-      7.Press 'Format'
+      7.Press 'Format'*(格式化)
 ```
 ![format partition](./EFI/APPLE/Diskpartition/8.png)  
 * ```MacOS partition```
@@ -312,6 +312,30 @@ Don't
         9.Follow Windows Installation Guide and finish it
   ```
 * ```Now your computer are running Windows 10```
-## __MacOS Installation__
+## __MacOS-Installation__
+```diff
+!   Before next step,you need another flash disk(memory size above 16GB)
+```
+### Disk-Partition
+* ```introduction to volume```
+
+|Volume label|Function|File system|
+|:------|:------|:-----|
+|WinPE|for windows recovery|FAT32|
+|Boot Tool|space for boot MacOS and Windows|FAT32|
+|MacOS|space for MacOS image|APFS(Mac OS 10.14+) / HFS|
+|Data1|for exchange data between windows and MacOS|FAT32|
+|Data2|same as 'Data1'|FAT32|
+```diff
+-  MacOS 10.14+ not support write data to NTFS volume,but can read(need kext)
+```
+```diff
++      You can partition your flash disk into 5 volumes(assume your flash disk size is 32GB,29.7GB avaliable)
++      WinPE: 200MB
++      Boot Tool: 100MB
++      MacOS image: 10GB
++      Data1:13GB  (16GB flash disk:4GB)
++      Data2:6.1GB  (16GB flash disk:none)
+```
 
 
