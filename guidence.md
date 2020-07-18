@@ -1,7 +1,7 @@
-## Guidence
+## **Guidence**
 ***
 ```This guidence will tell you how to make a perfective hackintosh device```
-## Contents
+## **Contents**
 * [Before Start](#BeforeStart)
 * [References](#References)
 * [Choose Device](#Choose-Device)
@@ -25,7 +25,7 @@
   * [Disable](#Disable)
 * [Disk Partition](#Disk-Partition)
 
-## BeforeStart
+## **BeforeStart**
 ```diff
 !   1. Be Patient
 !   2. Studious and come up with a solution via all ways you can find(Search Engine,BBS,YouTube etc.)
@@ -42,9 +42,9 @@
 ---
   * ![Hackintosh Step](./EFI/APPLE/Hackintosh-Step.png)
 ---
-## Choose-Device
+## **Choose-Device**
 ```A good device choice is half the battle```
-### Desktop-PC
+### __Desktop-PC__
 #### CPU
 ```diff
 Recommand
@@ -169,7 +169,7 @@ Don't
 +   1.Intel NUC8 Series
 +   2.AsRock Deskmini310 Series
 ```
-### Laptop
+### __Laptop__
   * [LTS Laptop List](https://blog.daliansky.net/Hackintosh-long-term-maintenance-model-checklist.html)
 #### Mobile-CPU
 ```diff
@@ -217,12 +217,12 @@ Don't
 -   6.Boot Option -- OS Type -- Other
 -   7.Onboard Wi-Fi and Bluetooth
 ```
-## Disk-Partition
+## **Disk-Partition**
 ```diff
 !   We assume that you have a new computer.
 !   If you already have a computer with windows operating system,you can skip 'Windows Installation'
 ```
-### Windows Installation  
+### __Windows-Installation__  
   * ```Download OS image```  
       * [Windows 10 Consumer X64](ed2k://|file|cn_windows_10_consumer_editions_version_1909_updated_jan_2020_x64_dvd_47161f17.iso|5417457664|274FEBA5BF0C874C291674182FA9C851|/)(```memory size: > 4G```)
       * [Windows 10 Consumer X86](ed2k://|file|cn_windows_10_consumer_editions_version_1909_updated_jan_2020_x86_dvd_9c50652f.iso|3884539904|0F2E887F2845BCD5C61E99E74D717287|/)(```memory size: <= 4G```)
@@ -249,3 +249,5 @@ Don't
         9.Follow Windows Installation Guide and finish it
   ```
 * ```Now your computer are running Windows 10```
+
+### __MacOS-Installation__
