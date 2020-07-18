@@ -220,7 +220,38 @@ Don't
 ## **Disk-Partition**
 ```diff
 !   We assume that you have a new computer.
-!   If you already have a computer with windows operating system,you can skip 'Windows Installation'
+!   If you already have a computer with windows operating system,PLEASE BACKUP YOUR DATA
+```
+### __Create ESP(EFI) volume__
+**There are two kinds of installation**
+* ```<1> MacOS and Windows in the same disk```
+```diff
+!     Usually,windows operating system disturbute about 120MB for ESP(EFI) volumn
+      1.Download 'DaBaiCai Installation Tool'
+```
+ [DaBaiCai Installation Tool](https://pan.baidu.com/s/1HTCgWwzTIrK9V_VYv7olWw)
+**Code: 0iob**
+```
+      2.Open it and download all components,press OK(确定)
+      3.Wait for download(may take 5 minutes)
+```
+![download component](./EFI/APPLE/Diskpartition/5.png)
+```diff
+!     Before the next step,YOU MUST BACKUP YOUR DATA
+      4.connect your USB flash disk,and press 'One-Key-Make-USB-Boot-Device'(一键制作成USB启动盘)
+      5.Wait for making
+      6.Reboot and enter WinPE system
+      7.Open 'Diskgenius.exe'
+      8.Choose the disk you want to install MacOS and Windows
+```
+![choose ESP(EFI) volumn](./EFI/APPLE/Diskpartition/3.png)
+```
+      9.Press 'Ctrl + F11'
+```
+![change ESP(EFI) volumn size](./EFI/APPLE/Diskpartition/4.png)
+```diff
+!     You can change the size from 350MB to 500MB as you like
+      10.Press start(开始)
 ```
 ### __Windows-Installation__  
   * ```Download OS image```  
@@ -236,18 +267,20 @@ Don't
         3. Choose image file
         4. Press load(加载)
   ```  
+---
 ![load image](./EFI/APPLE/Diskpartition/1.png)
+---
   ```
         5.Choose start(启动)
         6.Write harddisk image(写入硬盘映像)
   ```
+---
 ![write image](./EFI/APPLE/Diskpartition/2.png)
   ```diff
-  !    You MUST BACKUP your data BEFORE the next option,your flash disk WILL BE FORMATTED
+  !    You MUST BACKUP your data BEFORE the next step,your flash disk WILL BE FORMATTED
         7.Choose write(写入)
         8.Restart Computer and wait for boot
         9.Follow Windows Installation Guide and finish it
   ```
 * ```Now your computer are running Windows 10```
 
-### __MacOS-Installation__
