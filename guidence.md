@@ -222,9 +222,9 @@ Don't
 !   We assume that you have a new computer.
 !   If you already have a computer with windows operating system,PLEASE BACKUP YOUR DATA
 ```
-### __Create ESP(EFI) volume__
+### __Create-ESP(EFI)-volume__
 ```diff
-!     Usually,windows operating system disturbute about 120MB for ESP(EFI) volumn
+!     Usually,windows operating system disturbute about 120MB for ESP(EFI) volume
       1.Download 'DaBaiCai Installation Tool'
 ```
 *   [DaBaiCai Installation Tool](https://pan.baidu.com/s/1HTCgWwzTIrK9V_VYv7olWw)  
@@ -246,7 +246,7 @@ Don't
 ```
       9.Partition(分区) --- create ESP(EFI)/MSR partition(建立ESP/MSR分区)
 ```
-![create ESP(EFI) and MSR(Recovery) volumn](./EFI/APPLE/Diskpartition/4.png)
+![create ESP(EFI) and MSR(Recovery) volume](./EFI/APPLE/Diskpartition/4.png)
 ```diff
 !     You can change the size from 350MB to 500MB as you like
       10.Change ESP(EFI) volume size
@@ -261,7 +261,7 @@ Don't
 +     Windows:  2 volumes  (C(120GB) and  D(144GB))
 +     MacOS:  1 volume(MacOS(200GB))
 ```
-  * ```Partition Steps```
+* ```Windows Partition``` 
 ```
       1.Partition(分区) --- create new partition
 ```
@@ -275,15 +275,20 @@ Don't
 +     Recommand cluster size is 4096 bytes
       7.Press 'Format'
 ```
-![format partition](./EFI/APPLE/Diskpartition/8.png)
+![format partition](./EFI/APPLE/Diskpartition/8.png)  
+* ```MacOS partition```
+```diff
+-     Don't format volume
++     Use MacOS --- 'Disk Tool' instead
+```
 ### __Windows-Installation__
 ```diff
 !     You need another available PC to write image
 -     Don't use DaBaiCai Tool(大白菜) install Windows
 ```
   * ```Download Windows image```  
-      * [Windows 10 Consumer X64] (ed2k://|file|cn_windows_10_consumer_editions_version_1909_updated_jan_2020_x64_dvd_47161f17.iso|5417457664|274FEBA5BF0C874C291674182FA9C851|/)(```memory size: > 4G```)
-      * [Windows 10 Consumer X86] (ed2k://|file|cn_windows_10_consumer_editions_version_1909_updated_jan_2020_x86_dvd_9c50652f.iso|3884539904|0F2E887F2845BCD5C61E99E74D717287|/)(```memory size: <= 4G```)
+      * [Windows 10 Consumer X64] (ed2k://|file|cn_windows_10_consumer_editions_version_1909_updated_jan_2020_x64_dvd_47161f17.iso|5417457664|274FEBA5BF0C874C291674182FA9C851|/)(```memory size above 4GB```)
+      * [Windows 10 Consumer X86] (ed2k://|file|cn_windows_10_consumer_editions_version_1909_updated_jan_2020_x86_dvd_9c50652f.iso|3884539904|0F2E887F2845BCD5C61E99E74D717287|/)(```memory size less than 4GB```)
   * ```Download UltraISO```
       * [UltraISO 9.72](https://pan.baidu.com/s/1BYKaktRlW_fiEIVJ4Tju8w)  
         **Code: en9v**  
@@ -304,9 +309,12 @@ Don't
 ---
 ![write image](./EFI/APPLE/Diskpartition/2.png)
   ```diff
-  !    You MUST BACKUP your data BEFORE the next step,your flash disk WILL BE FORMATTED
+  !     You MUST BACKUP your data BEFORE the next step,your flash disk WILL BE FORMATTED
         7.Choose write(写入)
         8.Restart Computer and wait for boot
         9.Follow Windows Installation Guide and finish it
   ```
 * ```Now your computer are running Windows 10```
+## __MacOS Installation__
+
+
