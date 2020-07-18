@@ -350,13 +350,13 @@ Don't
 __Code: 07hv__
 
 ```diff 
-      2.Download MacOS image(*.dng)
+      2.Download MacOS image(*.dmg)
 ```
 [MacOS_Catalina_10.15_Clover](https://pan.baidu.com/s/1wDD7ZeyrCQxZxzUuhrauSw)  
 **Code: eht4**  
 **Decompress Code: imac.hk**  
 ```
-      3.Open 'TransMac'
+      3.Open 'TransMac' by administrator mode
       4.Choose your flash disk --- Mouse right click --- Format disk for Mac
       5.Input volume name as you like
 ```
@@ -372,4 +372,5 @@ __Code: 07hv__
 ```
       9.Press 'OK'
       10.Wait for image writing,it may takes more than 20 minutes
+      11.Reboot and enter Clover UI
 ```
