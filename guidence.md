@@ -62,7 +62,7 @@ Can Support
 Don't
 -   1.Intel Atom Series(such as D525 N330)
 -   2.AMD Ryzen APU(such as 2200G 3400G)
--   3.Intel Celeron N Series(such as N1900) & J Series(such as J4100)
+-   3.Intel Celeron J Series(such as J1900) & N Series(such as N4100)
 #   CPU which not mentioned above please search by yourself
 ```
 #### GPU
@@ -292,12 +292,12 @@ Don't
   * ```Download UltraISO```
       * [UltraISO 9.72](https://pan.baidu.com/s/1BYKaktRlW_fiEIVJ4Tju8w)  
         **Code: en9v**  
-  * ```Loading image```  
+  * ```Mount image```  
   ```  
         1. Open 'UltraISO.exe' by administator mode
-        2. Press F6(load to virtual DVD-ROM)
+        2. Press F6(mount to virtual DVD-ROM)
         3. Choose image file
-        4. Press load(加载)
+        4. Press mount(加载)
   ```  
 ![load image](./EFI/APPLE/Diskpartition/1.png)
   ```
@@ -334,7 +334,7 @@ Don't
 +      You can partition your flash disk into 5 volumes(assume your flash disk size is 32GB,29.7GB avaliable)
 +      WinPE: 200MB
 +      Boot Tool: 100MB
-+      MacOS image: 10GB
++      MacOS: 10GB
 +      Data1:13GB  (16GB flash disk:4GB)
 +      Data2:6.1GB  (16GB flash disk:none)
 ```
@@ -363,14 +363,36 @@ __Code: 07hv__
 ![format disk for Mac](./EFI/APPLE/Diskpartition/9.png)
 ```diff
 !     If errors occured,you can plug your USB-Flash-disk in USB ports backward
-!     You MUST BACKUP your data BEFORE the next step,your flash disk WILL BE FORMATTED
+!     You MUST BACKUP your DATA BEFORE the next step,your flash disk WILL BE FORMATTED
       6.Press 'OK'
       7.Choose your flash disk --- Mouse right click --- Restore with Disk image
       8.Press 'Yes'
 ```
 ![choose image](./EFI/APPLE/Diskpartition/10.png)
-```
+```diff
       9.Press 'OK'
       10.Wait for image writing,it may takes more than 20 minutes
-      11.Reboot and enter Clover UI
++     when your image filename is 'MacOS_XXX_Clover' or 'MacOS_XXX_OC'
+!     11.Reboot and enter Clover or OC Boot
++     when your image filename is 'MacOS_XXX'
+!     11.Download Clover and decompress it
+!     12.Open 'Clover-XXXX-X64.iso'
+!     13.Use 'UltraISO' and mount it to a virtual DVD-ROM
+!     14.Copy to 'Boot Tool' volume
 ```
+![clover boot](./EFI/APPLE/Diskpartition/11.png)
+```
+      12.Press 'left' and choose 'Boot MacOS instll from XXX (XXX is your volume label)
+      13.After code running and enter MacOS Installation Guide
+```
+```diff
+-     common error may occur:
+-     1.display '+++++++' or similar signal
++     replace '/Clover/EFI/drivers/UEFI/OsxAptioFix3Drv.efi' to 'Clover/EFI/drivers/off/OsxAptioFixDrv.efi'
+-     2.display 'panic ...' or similar signal
++     miss kext file,please add kext that your device needed
+-     3.display 'Deny' signal
++     replace your .efi file in /Clover/EFI/drivers/UEFI
+```
+**Other error,please refer:**
+
