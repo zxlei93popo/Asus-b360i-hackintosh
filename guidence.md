@@ -223,13 +223,11 @@ Don't
 !   If you already have a computer with windows operating system,PLEASE BACKUP YOUR DATA
 ```
 ### __Create ESP(EFI) volume__
-**There are two kinds of installation**
-* ```<1> MacOS and Windows in the same disk```
 ```diff
 !     Usually,windows operating system disturbute about 120MB for ESP(EFI) volumn
       1.Download 'DaBaiCai Installation Tool'
 ```
- [DaBaiCai Installation Tool](https://pan.baidu.com/s/1HTCgWwzTIrK9V_VYv7olWw)
+*   [DaBaiCai Installation Tool](https://pan.baidu.com/s/1HTCgWwzTIrK9V_VYv7olWw)  
 **Code: 0iob**
 ```
       2.Open it and download all components,press OK(确定)
@@ -244,17 +242,46 @@ Don't
       7.Open 'Diskgenius.exe'
       8.Choose the disk you want to install MacOS and Windows
 ```
-![choose ESP(EFI) volumn](./EFI/APPLE/Diskpartition/3.png)
+![choose installation disk](./EFI/APPLE/Diskpartition/3.png)
 ```
-      9.Press 'Ctrl + F11'
+      9.Partition(分区) --- create ESP(EFI)/MSR partition(建立ESP/MSR分区)
 ```
-![change ESP(EFI) volumn size](./EFI/APPLE/Diskpartition/4.png)
+![create ESP(EFI) and MSR(Recovery) volumn](./EFI/APPLE/Diskpartition/4.png)
 ```diff
 !     You can change the size from 350MB to 500MB as you like
-      10.Press start(开始)
+      10.Change ESP(EFI) volume size
 ```
-### __Windows-Installation__  
-  * ```Download OS image```  
+![change ESP(EFI) volume size](./EFI/APPLE/Diskpartition/6.png)
+```
+      11.Press 'OK'
+```
+### __Volume-Division__
+```diff
++     You can partition your disk into 3 volumes(assume your disk size is 500GB,465GB avaliable)
++     Windows:  2 volumes  (C(120GB) and  D(144GB))
++     MacOS:  1 volume(MacOS(200GB))
+```
+  * ```Partition Steps```
+```
+      1.Partition(分区) --- create new partition
+```
+![create new partition](./EFI/APPLE/Diskpartition/7.png)
+```diff
+      2.File system(文件系统类型) --- NTFS
+      3.Input the size you want
+      4.Press 'Ok'
+      5.Press F8(Save partition table)(保存分区表)
+      6.Partition --- format current partition(格式化当前分区)
++     Recommand cluster size is 4096 bytes
+      7.Press 'Format'
+```
+![format partition](./EFI/APPLE/Diskpartition/8.png)
+### __Windows-Installation__
+```diff
+!     You need another available PC to write image
+-     Don't use DaBaiCai Tool(大白菜) install Windows
+```
+  * ```Download Windows image```  
       * [Windows 10 Consumer X64] (ed2k://|file|cn_windows_10_consumer_editions_version_1909_updated_jan_2020_x64_dvd_47161f17.iso|5417457664|274FEBA5BF0C874C291674182FA9C851|/)(```memory size: > 4G```)
       * [Windows 10 Consumer X86] (ed2k://|file|cn_windows_10_consumer_editions_version_1909_updated_jan_2020_x86_dvd_9c50652f.iso|3884539904|0F2E887F2845BCD5C61E99E74D717287|/)(```memory size: <= 4G```)
   * ```Download UltraISO```
@@ -263,7 +290,7 @@ Don't
   * ```Loading image```  
   ```  
         1. Open 'UltraISO.exe' by administator mode
-        2. Press F6
+        2. Press F6(load to virtual DVD-ROM)
         3. Choose image file
         4. Press load(加载)
   ```  
@@ -283,4 +310,3 @@ Don't
         9.Follow Windows Installation Guide and finish it
   ```
 * ```Now your computer are running Windows 10```
-
