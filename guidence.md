@@ -299,14 +299,11 @@ Don't
         3. Choose image file
         4. Press load(加载)
   ```  
----
 ![load image](./EFI/APPLE/Diskpartition/1.png)
----
   ```
         5.Choose start(启动)
         6.Write harddisk image(写入硬盘映像)
   ```
----
 ![write image](./EFI/APPLE/Diskpartition/2.png)
   ```diff
   !     You MUST BACKUP your data BEFORE the next step,your flash disk WILL BE FORMATTED
