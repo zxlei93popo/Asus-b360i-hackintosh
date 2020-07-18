@@ -255,7 +255,7 @@ Don't
 ```
       11.Press 'OK'
 ```
-### __Volume-Division__
+### __Volume-partition__
 ```diff
 +     You can partition your disk into 3 volumes(assume your disk size is 500GB,465GB avaliable)
 +     Windows:  2 volumes  (C(120GB) and  D(144GB))
@@ -328,6 +328,7 @@ Don't
 |Data2|same as 'Data1'|FAT32|
 ```diff
 -  MacOS 10.14+ not support write data to NTFS volume,but can read(need kext)
+!  If you download MacOS image with filename 'MacOS_XXX_Clover' or 'MacOS_XXX_OC',you can jump to 'Volume 'MacOS''
 ```
 ```diff
 +      You can partition your flash disk into 5 volumes(assume your flash disk size is 32GB,29.7GB avaliable)
@@ -337,5 +338,38 @@ Don't
 +      Data1:13GB  (16GB flash disk:4GB)
 +      Data2:6.1GB  (16GB flash disk:none)
 ```
+  * [Volume partition](#Volume-partition)
+```diff
+-     Don't format volume 'MacOS'
+```
+* ```Volume 'MacOS'```
+```
+      1.Download 'TransMac' and setup
+```
+[TransMac V12.5](https://pan.baidu.com/s/1k-8-YrMcY4_JYbvHQAz8TQ)  
+__Code: 07hv__
 
-
+```diff 
+      2.Download MacOS image(*.dng)
+```
+[MacOS_Catalina_10.15_Clover](https://pan.baidu.com/s/1wDD7ZeyrCQxZxzUuhrauSw)  
+**Code: eht4**  
+**Decompress Code: imac.hk**  
+```
+      3.Open 'TransMac'
+      4.Choose your flash disk --- Mouse right click --- Format disk for Mac
+      5.Input volume name as you like
+```
+![format disk for Mac](./EFI/APPLE/Diskpartition/9.png)
+```diff
+!     If errors occured,you can plug your USB-Flash-disk in USB ports backward
+!     You MUST BACKUP your data BEFORE the next step,your flash disk WILL BE FORMATTED
+      6.Press 'OK'
+      7.Choose your flash disk --- Mouse right click --- Restore with Disk image
+      8.Press 'Yes'
+```
+![choose image](./EFI/APPLE/Diskpartition/10.png)
+```
+      9.Press 'OK'
+      10.Wait for image writing,it may takes more than 20 minutes
+```
