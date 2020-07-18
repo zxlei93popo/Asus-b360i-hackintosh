@@ -228,7 +228,7 @@ Don't
       1.Download 'DaBaiCai Installation Tool'
 ```
 *   [DaBaiCai Installation Tool](https://pan.baidu.com/s/1HTCgWwzTIrK9V_VYv7olWw)  
-**Code: 0iob**
+    **Code: 0iob**
 ```
       2.Open it and download all components,press OK(确定)
       3.Wait for download(may take 5 minutes)
