@@ -220,7 +220,7 @@ Don't
 ## Disk-Partition
 ```diff
 !   We assume that you have a new computer.
-!   if you already have a computer with windows operating system,you can skip 'Windows Installation'
+!   If you already have a computer with windows operating system,you can skip 'Windows Installation'
 ```
 ### Windows Installation  
   * ```Download OS image```  
@@ -235,13 +235,13 @@ Don't
         2. Press F6
         3. Choose image file
         4. Press load(加载)
-  ```
-    ![load image](./EFI/APPLE/Diskpartition/1.png)
+  ```  
+![load image](./EFI/APPLE/Diskpartition/1.png)
   ```
         5.Choose start(启动)
         6.Write harddisk image(写入硬盘映像)
   ```
-    ![write image](./EFI/APPLE/Diskpartition/2.png)
+![write image](./EFI/APPLE/Diskpartition/2.png)
   ```diff
   !    You MUST BACKUP your data BEFORE the next option,your flash disk WILL BE FORMATTED
         7.Choose write(写入)
