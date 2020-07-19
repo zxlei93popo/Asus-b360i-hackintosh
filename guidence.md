@@ -323,7 +323,7 @@ Don't
 |:------|:------|:-----|
 |WinPE|for windows recovery|FAT32|
 |Boot Tool|space for boot MacOS and Windows|FAT32|
-|MacOS|space for MacOS image|APFS(Mac OS 10.14+) / HFS|
+|MacOS|space for MacOS image|APFS(Mac OS 10.14+) / HFS+|
 |Data1|for exchange data between windows and MacOS|FAT32|
 |Data2|same as 'Data1'|FAT32|
 ```diff
@@ -362,7 +362,7 @@ __Code: 07hv__
 ```
 ![format disk for Mac](./EFI/APPLE/Diskpartition/9.png)
 ```diff
-!     If errors occured,you can plug your USB-Flash-disk in USB ports backward
+!     If errors occured,you can plug your USB-flash-disk in USB ports backward
 !     You MUST BACKUP your DATA BEFORE the next step,your flash disk WILL BE FORMATTED
       6.Press 'OK'
       7.Choose your flash disk --- Mouse right click --- Restore with Disk image
@@ -380,19 +380,52 @@ __Code: 07hv__
 !     13.Use 'UltraISO' and mount it to a virtual DVD-ROM
 !     14.Copy to 'Boot Tool' volume
 ```
+
+### Boot-Tool
+|Boot Tool Name|Feature|
+|-----|-------|
+|Clover|Stable,'config.plist' easy to configurate,Graphic UI|
+|OC|Newer,'Support new devices',more configuration item|
+
+
 ![clover boot](./EFI/APPLE/Diskpartition/11.png)
 ```
       12.Press 'left' and choose 'Boot MacOS instll from XXX (XXX is your volume label)
       13.After code running and enter MacOS Installation Guide
 ```
+### Installation
+#### While loading
 ```diff
--     common error may occur:
--     1.display '+++++++' or similar signal
+-     error may occur:
+-     1.black screen while loading
++     update your WhateverGreen.kext to a newer version
+-     2.display '+++++++' or similar signal
 +     replace '/Clover/EFI/drivers/UEFI/OsxAptioFix3Drv.efi' to 'Clover/EFI/drivers/off/OsxAptioFixDrv.efi'
--     2.display 'panic ...' or similar signal
+-     3.display 'panic ...' or similar signal
 +     miss kext file,please add kext that your device needed
--     3.display 'Deny' signal
+-     4.display 'Deny' signal
 +     replace your .efi file in /Clover/EFI/drivers/UEFI
 ```
+#### Installation
+```diff
++    1.Choose 'Disk Utilities'
++    2.Show all volumes
++    3.Earse volume
++    4.File System choose Mac OS X Extension(log)
+-    Don't choose APFS as file system
++    5.Follow MacOS Installation Guide
+-    error may occur:
+-    Installation stop running at the last 2 minutes
++    disconnect from Internet
++    replace 'AptioMemoryFix.efi' with 'OsxAptioFixDrv.efi' or 'OsxAptioFixDrv3.efi' 
+```
+* _Tips_:
+```diff
+-    Don't choose 'send diagnostics'
+-    Don't choose 'send Siri's voice track'
+```
+[WhateverGreen v1.4.0](https://github.com/acidanthera/WhateverGreen/releases/download/1.4.0/WhateverGreen-1.4.0-RELEASE.zip)  
 **Other error,please refer:**
+[**error while installation**](https://blog.daliansky.net/Common-problems-and-solutions-in-macOS-Catalina-10.15-installation.html)
+
 
