@@ -394,23 +394,23 @@ __Code: 07hv__
       13.After code running and enter MacOS Installation Guide
 ```
 #### File-tree(clover)
->Clover
->>ACPI
->>>origin (for origin SSDT and DSDT files)  
->>>patched (for modified SSDT and DSDT files)  
+>___Clover___
+>>___ACPI___
+>>>***origin***  (for origin SSDT and DSDT files)  
+>>>***patched***  (for modified SSDT and DSDT files)  
 
->>drivers
->>>off (for backup efi files)  
->>>UEFI (for efi files that UEFI boot need)  
->>>Boot (for efi files that Legacy boot need)  
+>>***drivers***
+>>>***off***  (for backup efi files)  
+>>>***UEFI***  (for efi files that UEFI boot need)  
+>>>***Boot***  (for efi files that Legacy boot need)  
 
->>kext (for driver to your device or inject to kernel)
+>>***kext***  (for driver to your device or inject to kernel)
 
->>tool (for utilities needed in clover,such as shell)
+>>***tool***  (for utilities needed in clover,such as shell)
 
->CLOVERX64.efi (main file)
+>***CLOVERX64.efi*** (main file)
 
->config.plist (main configuration file)
+>***config.plist*** (main configuration file)
 
 [**How to configure OC boot**](https://blog.daliansky.net/OpenCore-BootLoader.html)
 ### **Installation**
