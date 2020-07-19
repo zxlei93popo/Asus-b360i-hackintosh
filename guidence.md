@@ -393,7 +393,7 @@ __Code: 07hv__
       12.Press 'left' and choose 'Boot MacOS instll from XXX (XXX is your volume label)
       13.After code running and enter MacOS Installation Guide
 ```
-### Installation
+### **Installation**
 #### While loading
 ```diff
 -     error may occur:
@@ -406,7 +406,7 @@ __Code: 07hv__
 -     4.display 'Deny' signal
 +     replace your .efi file in /Clover/EFI/drivers/UEFI
 ```
-#### Installation
+#### while installing
 ```diff
 +    1.Choose 'Disk Utilities'
 +    2.Show all volumes
@@ -421,11 +421,14 @@ __Code: 07hv__
 ```
 * _Tips_:
 ```diff
--    Don't choose 'send diagnostics'
--    Don't choose 'send Siri's voice track'
+     Don't choose 'send diagnostics'
+     Don't choose 'send Siri's voice track'
 ```
 [WhateverGreen v1.4.0](https://github.com/acidanthera/WhateverGreen/releases/download/1.4.0/WhateverGreen-1.4.0-RELEASE.zip)  
 **Other error,please refer:**
 [**error while installation**](https://blog.daliansky.net/Common-problems-and-solutions-in-macOS-Catalina-10.15-installation.html)
+
+## **Patch**
+
 
 
