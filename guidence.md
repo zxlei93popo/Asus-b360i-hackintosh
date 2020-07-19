@@ -489,7 +489,7 @@ When you fill data in 'config.plist',you need:
 +           4.You can use 'Calc' item in 'Hackintool'
 ```
 #### PEG
-##### 'config.plist'
+##### Configuration in 'config.plist'
 ```
       <key>Devices</key>
       ...
@@ -518,7 +518,8 @@ When you fill data in 'config.plist',you need:
 ```
 * ```supported devices```  
 ```need webdriver```
-[WebDriver 1.18](http://www.pc6.com/mac/480813.html)
+[__WebDriver 1.18__](https://pan.baidu.com/s/1f-D7_qvkIfoohw5biJPpEg)  
+**Code: ms74**
 ```diff
       <key>Devices</key>
       ...
@@ -539,4 +540,27 @@ When you fill data in 'config.plist',you need:
 		</dict>
       ...
 ```
-c
+##### Display Output Repair(Pink Screen)
+* ```repair ports```
+```
+      1.Download 'IORegistryExplorer'
+```
+[__IORegistryExplorer__](https://pan.baidu.com/s/1ZX7Y4xOqt2tWT48XwOQKGQ)  
+**Code: wdpz**  
+**Decompress Code: heipg.cn**
+```
+      2.Locate to PEG directory(such as PCI(0x0)/PCI(0x1a,0x1))
+```
+![__find directory__](./EFI/APPLE/Patch/2.png)
+```
+      3.Locate to option with 'Display 0' item
+      4.Check 'connection-type'
+      5.Repair as below
+```
+
+|Port name|HEX|Connection-type|Reverse|
+|:-----|-----:|-----:|-----:|
+|DP|0x400|00 00 04 00|00 40 00 00|
+|HDMI|0x800|00 00 08 00|00 80 00 00|
+|DVI|0x04|00 00 00 04|40 00 00 00|
+
