@@ -393,6 +393,7 @@ __Code: 07hv__
       12.Press 'left' and choose 'Boot MacOS instll from XXX (XXX is your volume label)
       13.After code running and enter MacOS Installation Guide
 ```
+[OC boot](https://blog.daliansky.net/OpenCore-BootLoader.html)
 ### **Installation**
 
 #### While loading
@@ -430,10 +431,112 @@ __Code: 07hv__
 [**error while installation**](https://blog.daliansky.net/Common-problems-and-solutions-in-macOS-Catalina-10.15-installation.html)
 
 ## **Patch**
-### Graphic-Card  
+### Graphic-Card
+#### iGPU  
 ```diff
-+    1.Download 'Hackintool' 
++    1.Download 'Hackintool' and decompress 
 ```
 [**HackinTool**](https://pan.baidu.com/s/1_VvPcK-v1pyL3xPI5A42vw)  
 __Code: h4oa__
-     2
+```
+     2.Open 'Terminal' and input
+```
+```  
+     cd /Users/username/Downloads(your user name)
+     sudo cp Hackintool.app ~/Applications
+```
+```diff
+     3.Open 'HackinTool'
+     4.Choose 'System' item
+-    if your 'platform-id' and 'generation' selection are display '???' you need patch
+```
+##### Patch
+* ```You can choose one from below options:```
+  * ```By Hackintool```
+```diff
+            1.Choose 'Patch item'
+            2.Select 'Intel generation' matchs your CPU
+```
+```
+            3.Select 'Platform-id' matchs your iGPU
+```
+**Please refer:**
+[__Platform-id__](https://blog.daliansky.net/Intel-core-display-platformID-finishing.html)
+![choose platform-id](./EFI/APPLE/Patch/1.png)
+```
+            4.Choose 'Patch'(after connectors)
+            5.Press 'Generation' and Copy code
+            6.Download 'XCode'  or  'PlistEditPro'
+            7.New file and paste code
+            8.Rename the new file with 'xxx.plist'
+            9.Use 'XCode' or 'PlistEditPro' open the file and 'config.plist'
+```
+```locate config.plist to```
+```json
+      <key>Devices</key>
+            <key>Properties</key>
+                  /*add here*/
+```
+```
+            10.Restart your computer
+```  
+_Tips_:
+When you fill data in 'config.plist',you need:
+```diff
++           1.Divided your data by '2-bits'
++           2.Reverse it every 2 bits
++           3.Convert it from 'HEX' to 'Base64'
++           4.You can use 'Calc' item in 'Hackintool'
+```
+#### PEG
+##### 'config.plist'
+```
+      <key>Devices</key>
+      ...
+            <key>Graphics</key>
+```
+* ```driver-free devices```
+```diff
+      <key>Devices</key>
+      ...
+            <key>Graphics</key>
+            <dict>
+                  <key>EDID</key>
+                        <Inject>
+!                       <false/>
+            </dict>
+            <key>Inject</key>
+		<dict>
+			<key>ATI</key>
+			<false/>
+			<key>Intel</key>
+			<false/>
+			<key>NVidia</key>
+!     		<false/>
+		</dict>
+      ...
+```
+* ```supported devices```  
+```need webdriver```
+[WebDriver 1.18](http://www.pc6.com/mac/480813.html)
+```diff
+      <key>Devices</key>
+      ...
+            <key>Graphics</key>
+            <dict>
+                  <key>EDID</key>
+                        <Inject>
+!                       <true/>
+            </dict>
+            <key>Inject</key>
+		<dict>
+			<key>ATI</key>
+			<false/>
+			<key>Intel</key>
+			<false/>
+			<key>NVidia</key>
+!     		<true/>
+		</dict>
+      ...
+```
+c
