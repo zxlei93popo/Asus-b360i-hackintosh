@@ -402,14 +402,42 @@ _Tip:_
 #### Before loading
 ```diff
 +     If your MacOS version newer than 10.13.6,you need these patches
+!     MacOS has change these names in DSDT
 ```
 |Patch Name|Find|Replace|
 |:----|-----:|-----:|
-|
-
-
-
-
+|_STA to XSTA|5F535441|58535441|
+|EHC1 to EH01|45484331|45483031|
+|EHC2 to EH02|45484332|45483032|
+|XHCI to XHC|58484349|5848435F|
+|XHC1 to XHC|58484331|5848435F|
+```locate to 'config.plist'```
+```diff
+<key>ACPI</key>
+      ...
+      <key><DSDT></key>
+      ...  
+            <key>Patches</key>
+            <array>
+                  <dict>
++                       /*add here*/
+                        ...
+                  </dict>
+            </array>
+```
+```example patch```
+```
+      <key>Comment</key>
+            <string>_STA  to XSTA</string>
+            <key>Disabled</key>                          #disabled the patch
+            <false/>          
+            <key>Find</key>
+            <data>X1NUQQ==</data>
+            <key>Replace</key>
+            <data>WFNUQQ==</data>
+            <key>TgtBridge</key>
+            <data>UlRDXw==</data>
+```
 #### While loading
 ```diff
 -     error may occur:
