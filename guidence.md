@@ -633,24 +633,22 @@ When you fill data in 'config.plist',you need:
       3.Click the lock to unlock it
       4.Choose correct ALC layout-id
       5.Click the lock to lock it
-     
 ```
 you can also change the value in 'config.plist'
-```
+```diff
       ...
       <key>Audio</key>
 		<dict>
 			<key>AFGLowPowerState</key>
 			<false/>
 			<key>Inject</key>
-			<integer>7</integer>
+!     		<integer>7</integer>
 			<key>ResetHDA</key>
 			<false/>
                   ...
 ```
 ![ALC layout-id](./EFI/APPLE/Patch/3.png)
-* ```VoodooHDA Inject```
-_Tip_:
+* ```VoodooHDA Inject```  
 ```diff
 +    Some model like realtek ALC881,ALC887 may need
 ```
