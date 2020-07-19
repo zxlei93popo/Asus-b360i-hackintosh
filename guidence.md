@@ -393,7 +393,26 @@ __Code: 07hv__
       12.Press 'left' and choose 'Boot MacOS instll from XXX (XXX is your volume label)
       13.After code running and enter MacOS Installation Guide
 ```
-[OC boot](https://blog.daliansky.net/OpenCore-BootLoader.html)
+#### File-tree(clover)
+>Clover
+>>ACPI
+>>>origin (for origin SSDT and DSDT files)  
+>>>patched (for modified SSDT and DSDT files)  
+
+>>drivers
+>>>off (for backup efi files)  
+>>>UEFI (for efi files that UEFI boot need)  
+>>>Boot (for efi files that Legacy boot need)  
+
+>>kext (for driver to your device or inject to kernel)
+
+>>tool (for utilities needed in clover,such as shell)
+
+>CLOVERX64.efi (main file)
+
+>config.plist (main configuration file)
+
+[**How to configure OC boot**](https://blog.daliansky.net/OpenCore-BootLoader.html)
 ### **Installation**
 _Tip:_
 ```diff
@@ -513,7 +532,7 @@ __Code: h4oa__
             8.Rename the new file with 'xxx.plist'
             9.Use 'XCode' or 'PlistEditPro' open the file and 'config.plist'
 ```
-```locate config.plist to```
+```locate 'config.plist' to```
 ```json
       <key>Devices</key>
             <key>Properties</key>
