@@ -657,4 +657,7 @@ you can also change the value in 'config.plist'
 
 
 ### __USB Port__
+```diff
+!      except some Z370 or Z390 motherboard,you need patch to kernel
 ```
+
