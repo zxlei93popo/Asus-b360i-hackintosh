@@ -384,8 +384,8 @@ __Code: 07hv__
 ### Boot-Tool
 |Boot Tool Name|Feature|
 |-----|-------|
-|Clover|Stable,'config.plist' easy to configurate,GUI|
-|OC|Newer,'Support new devices',more configuration item,no GUI|
+|Clover|Stable 'config.plist' easy to configurate GUI|
+|OC|Newer 'Support new devices' more configuration item no GUI|
 
 
 ![clover boot](./EFI/APPLE/Diskpartition/11.png)
@@ -431,7 +431,7 @@ __Code: 07hv__
 [**error while installation**](https://blog.daliansky.net/Common-problems-and-solutions-in-macOS-Catalina-10.15-installation.html)
 
 ## **Patch**
-### Graphic-Card
+### **Graphic-Card**
 #### iGPU  
 ```diff
 +    1.Download 'Hackintool' and decompress 
@@ -563,4 +563,6 @@ When you fill data in 'config.plist',you need:
 |DP|0x400|00 00 04 00|00 40 00 00|
 |HDMI|0x800|00 00 08 00|00 80 00 00|
 |DVI|0x04|00 00 00 04|40 00 00 00|
+
+### __Audio__
 
