@@ -395,6 +395,20 @@ __Code: 07hv__
 ```
 [OC boot](https://blog.daliansky.net/OpenCore-BootLoader.html)
 ### **Installation**
+_Tip:_
+```diff
+-     '.efi' file may not compatible between different OS version
+```
+#### Before loading
+```diff
++     If your MacOS version newer than 10.13.6,you need these patches
+```
+|Patch Name|Find|Replace|
+|:----|-----:|-----:|
+|
+
+
+
 
 #### While loading
 ```diff
@@ -565,4 +579,37 @@ When you fill data in 'config.plist',you need:
 |DVI|0x04|00 00 00 04|40 00 00 00|
 
 ### __Audio__
+* ```Inject(use AppleALC.kext)```
+```
+      1.Open 'Hackintool'
+      2.Choose 'Sound' option
+      3.Click the lock to unlock it
+      4.Choose correct ALC layout-id
+      5.Click the lock to lock it
+     
+```
+you can also change the value in 'config.plist'
+```
+      ...
+      <key>Audio</key>
+		<dict>
+			<key>AFGLowPowerState</key>
+			<false/>
+			<key>Inject</key>
+			<integer>7</integer>
+			<key>ResetHDA</key>
+			<false/>
+                  ...
+```
+![ALC layout-id](./EFI/APPLE/Patch/3.png)
+* ```VoodooHDA Inject```
+_Tip_:
+```diff
++    Some model like realtek ALC881,ALC887 may need
+```
+**Please refer**:  
+[voodooHDA inject](https://www.youtube.com/watch?v=yqrET5Skpm0)
 
+
+### ___USB Port___
+```
