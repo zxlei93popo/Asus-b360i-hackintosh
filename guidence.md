@@ -394,6 +394,7 @@ __Code: 07hv__
       13.After code running and enter MacOS Installation Guide
 ```
 ### **Installation**
+
 #### While loading
 ```diff
 -     error may occur:
@@ -431,5 +432,8 @@ __Code: 07hv__
 ## **Patch**
 ### Graphic-Card  
 ```diff
-+    1.Download 'Hackintosh Tool'
++    1.Download 'Hackintool' 
 ```
+[**HackinTool**](https://pan.baidu.com/s/1_VvPcK-v1pyL3xPI5A42vw)  
+__Code: h4oa__
+     2
