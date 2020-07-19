@@ -384,8 +384,8 @@ __Code: 07hv__
 ### Boot-Tool
 |Boot Tool Name|Feature|
 |-----|-------|
-|Clover|Stable,'config.plist' easy to configurate,Graphic UI|
-|OC|Newer,'Support new devices',more configuration item|
+|Clover|Stable,'config.plist' easy to configurate,GUI|
+|OC|Newer,'Support new devices',more configuration item,no GUI|
 
 
 ![clover boot](./EFI/APPLE/Diskpartition/11.png)
@@ -424,11 +424,12 @@ __Code: 07hv__
      Don't choose 'send diagnostics'
      Don't choose 'send Siri's voice track'
 ```
-[WhateverGreen v1.4.0](https://github.com/acidanthera/WhateverGreen/releases/download/1.4.0/WhateverGreen-1.4.0-RELEASE.zip)  
-**Other error,please refer:**
+[**WhateverGreen v1.4.0**](https://github.com/acidanthera/WhateverGreen/releases/download/1.4.0/WhateverGreen-1.4.0-RELEASE.zip)  
+**Other error,please refer:**  
 [**error while installation**](https://blog.daliansky.net/Common-problems-and-solutions-in-macOS-Catalina-10.15-installation.html)
 
 ## **Patch**
-
-
-
+### Graphic-Card  
+```diff
++    1.Download 'Hackintosh Tool'
+```
