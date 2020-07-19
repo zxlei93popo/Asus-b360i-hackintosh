@@ -459,7 +459,7 @@ _Tip:_
 ```
 #### While loading
 ```diff
--     error may occur:
+!     error may occur:
 -     1.black screen while loading
 +     update your WhateverGreen.kext to a newer version
 -     2.display '+++++++' or similar signal
