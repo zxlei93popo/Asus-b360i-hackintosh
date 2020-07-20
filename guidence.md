@@ -24,6 +24,39 @@
   * [Enable](#Enable)
   * [Disable](#Disable)
 * [Disk Partition](#Disk-Partition)
+  * [Create ESP(EFI) volume](#Create-ESP(EFI)-volume)
+  * [Volume partition](#Volume-partition)
+* [Windows Installation](#Windows-Installation)
+* [MacOS Installation](#MacOS-Installation)
+  * [MacOS Diskpartition](#MacOS-Disk-Partition)
+    * [Boot Tool](#Boot-Tool)
+  * [Installation-Step](#Installation-Step)
+    * [Before-Loading](#Before-loading)
+    * [While-Loading](#While-loading)
+    * [While-Installing](#While-installing)
+    * [After-Installation](#After-installation)
+* [Patch](#Patch)
+  * [Graphic Card](#Graphic-card)
+    * [iGPU](#iGPU)
+      * [iGPU Patch](#iGPU-patch)
+    * [PEG](#PEG)
+      * [Configuration in config.plist](#Configuration-in-'config.plist')
+      * [Display Output Repair](#Display-Output-Repair)
+  * [Audio](#Audio)
+  * [USB](#USB-Port)
+    * [Open USB Port Limited](#Open_USB_port_limits)
+      * [Configure USB Port](#Configuration-USB-port-in-'config.plist')
+    * [Custom Active USB Port](#Custom_Active_USB_Ports)
+  * [CPU](#CPU)
+    * [CPU SSDT](#CPU_SSDT)
+  * [Other Feature](#Other-Feature)
+    * [Custom ID](#Inject_SmUUID_ROM_CustomUUID)
+    * [iMessages and Facetime](#iMessage-and-Facetime)
+* [DSDT & SSDT](#DSDT-and-SSDT)
+  * [DSDT](#DSDT)
+    * [Repair Sleep](#Repair-Sleep)
+  * [SSDT](#SSDT)(#Repair-brightness-on-laptops)
+
 
 ## **BeforeStart**
 ```diff
@@ -281,7 +314,7 @@ Don't
 -     Don't format volume
 +     Use MacOS --- 'Disk Tool' instead
 ```
-### __Windows-Installation__
+## __Windows-Installation__
 ```diff
 !     You need another available PC to write image
 -     Don't use DaBaiCai Tool(大白菜) install Windows
@@ -316,7 +349,7 @@ Don't
 ```diff
 !   Before next step,you need another flash disk(memory size above 16GB)
 ```
-### Disk-Partition
+### MacOS-Disk-Partition
 * ```introduction to volume```
 
 |Volume label|Function|File system|
@@ -381,7 +414,7 @@ __Code: 07hv__
 !     14.Copy to 'Boot Tool' volume
 ```
 
-### Boot-Tool
+#### Boot-Tool
 |Boot Tool Name|Feature|
 |-----|-------|
 |Clover|Stable 'config.plist' easy to configurate GUI|
@@ -413,12 +446,12 @@ __Code: 07hv__
 >***config.plist*** (main configuration file)
 
 [**How to configure OC boot**](https://blog.daliansky.net/OpenCore-BootLoader.html)
-### **Installation**
+### **Installation-Step**
 _Tip:_
 ```diff
 -     '.efi' file may not compatible between different OS version
 ```
-#### Before loading
+#### Before-loading
 ```diff
 +     If your MacOS version newer than 10.13.6,you need these patches
 !     MacOS has change these names in DSDT
@@ -457,7 +490,7 @@ _Tip:_
       <key>TgtBridge</key>
       <data>UlRDXw==</data>
 ```
-#### While loading
+#### While-loading
 ```diff
 !     error may occur:
 -     1.black screen while loading
@@ -469,7 +502,7 @@ _Tip:_
 -     4.display 'Deny' signal
 +     replace your .efi file in /Clover/EFI/drivers/UEFI
 ```
-#### While installing
+#### While-installing
 ```diff
 +    1.Choose 'Disk Utilities'
 +    2.Show all volumes
@@ -492,7 +525,7 @@ _Tip:_
 **Other error,please refer:**  
 [**error while installation**](https://blog.daliansky.net/Common-problems-and-solutions-in-macOS-Catalina-10.15-installation.html)
 
-#### After installation
+#### After-installation
 * ```mount 'EFI' volume```
 ```      
       1.Choose the mount your install MacOS
@@ -536,7 +569,7 @@ __Code: h4oa__
      4.Choose 'System' item
 -    if your 'platform-id' and 'generation' selection are display '???' you need patch
 ```
-##### Patch
+##### iGPU-patch
 * ```You can choose one from below options:```
   * ```By Hackintool```
 ```diff
@@ -575,7 +608,7 @@ When you fill data in 'config.plist',you need:
 +           4.You can use 'Calc' item in 'Hackintool'
 ```
 #### PEG
-##### Configuration in 'config.plist'
+##### Configuration-in-'config.plist'
 ```
       <key>Devices</key>
       ...
@@ -626,9 +659,10 @@ When you fill data in 'config.plist',you need:
 		</dict>
       ...
 ```
-##### Display Output Repair(Pink Screen)
+##### Display-Output-Repair
 * ```repair ports```
-```
+```diff
+!     it can help you repairing 'Pink Screen'
       1.Download 'IORegistryExplorer'
 ```
 [__IORegistryExplorer__](https://pan.baidu.com/s/1ZX7Y4xOqt2tWT48XwOQKGQ)  
@@ -681,14 +715,14 @@ you can also change the value in 'config.plist'
 [voodooHDA inject](https://www.youtube.com/watch?v=yqrET5Skpm0)
 
 
-### __USB Port__
+### __USB-Port__
 ```diff
 !      except most Z370 or Z390 motherboard,you need patch to kernel
 !      if you don't patch,MacOS'll not recognize your USB Host Controller
 ```
 #### __Open_USB_port_limits__
 ```from 15 to more than 26 ports(MacOS 10.13.6+)```
-* **300 series motherboard**  
+* ```**300 series motherboard**```
 
 |Patch Name|Find|Replace|
 |:-----|:-----|:-----|
@@ -700,7 +734,7 @@ you can also change the value in 'config.plist'
 |Driver USB Apple USB XHCI|83FB0F0F|83FB3F3F|
 |Driver USB Apple USB XHCI|83FF0F0F|83FF3F3F|
 
-##### Configuration in 'config.plist'
+##### Configuration-USB-port-in-'config.plist'
 ```diff
       <key>KernelAndKextPatches</key>
       <dict>
@@ -784,7 +818,7 @@ you can also change the value in 'config.plist'
 -           Don't use 'CPU-S' utility,it's not suitable for 'Skylake+' generation CPUs
 -           Also 'CPU-S' can make conflict with 'Intel Power Gadget'
 ```
-### CPU_SSDT
+#### CPU_SSDT
 ```diff
             1.Download 'one-key-CPUFriend'
 !           you MUST refer 'README' 
@@ -793,8 +827,8 @@ you can also change the value in 'config.plist'
 ```
 [one-key-CPUFriend](https://github.com/stevezhengshiqi/one-key-cpufriend)
 
-### Other feature
-#### Inject_SmUUID_ROM_CustomUUID
+### **Other-feature**
+#### __Inject_SmUUID_ROM_CustomUUID__
 ```diff
 -           if you can't sign in iMessage,please check your '3-codes'
             1.Open 'Clover Configuration'
@@ -816,7 +850,7 @@ you can also change the value in 'config.plist'
 ```
 [__Hackintosh Inject SmUUID ROM CustomUUID__](https://www.bilibili.com/video/BV19i4y1x768?from=search&seid=18408673921607091745)
 
-### iMessage and Facetime
+#### __iMessage-and-Facetime__
 ```diff
 !           if you can't sign in iMessage or Facetime,please follow advices as below:
 ```
@@ -855,8 +889,8 @@ you can also change the value in 'config.plist'
 -           'OsxAptioFixDrv.efi' may cause clover can't load 'ROM' and 'Board-id' data from 'config.plist'
 +           replace 'OsxAptioFixDrv.efi' with 'ApitoMemoryFix.efi'
 ```
-```
-## **DSDT and SSDT**
+
+## **DSDT-and-SSDT**
 ### __DSDT__
 * ```collect DSDT and SSDT file```
 ```diff
@@ -889,7 +923,7 @@ __Code: bi5g__
 +           8.Use 'iasl *.dsl' to recomplier
 ```
               
-#### Repair Sleep
+#### Repair-Sleep
 ```diff
 !           solve wake immediately after select 'sleep' option 
             1.Open 'Terminal'
@@ -931,7 +965,7 @@ replace it:
             10.Copy to /Clover/ACPI/patched/
 ```
 ### __SSDT__
-#### Repair brightness on laptops
+#### Repair-brightness-on-laptops
 ```diff
             1.Decomplier 'SSDT-*.aml' with iasl
 -           Don't decomplier 'SSDT-x0/x1...' .aml,you can delete them
