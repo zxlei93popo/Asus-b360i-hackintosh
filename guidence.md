@@ -481,7 +481,7 @@ _Tip:_
 -    Installation stop running at the last 2 minutes
 +    disconnect from Internet
 +    replace 'AptioMemoryFix.efi' with 'OsxAptioFixDrv.efi' or 'OsxAptioFixDrv3.efi'
-+    or change your flash disk 
++    or select a 32GB memory size flash disk or plug-in port 
 ```
 * _Tips_:
 ```diff
@@ -659,6 +659,113 @@ you can also change the value in 'config.plist'
 
 ### __USB Port__
 ```diff
-!      except some Z370 or Z390 motherboard,you need patch to kernel
+!      except most Z370 or Z390 motherboard,you need patch to kernel
+!      if you don't patch,MacOS'll not recognize your USB Host Controller
 ```
+#### __Open_USB_port_limits__
+```from 15 to more than 26 ports(MacOS 10.13.6+)```
+* **300 series motherboard**  
+|Patch Name|Find|Replace|
+|:-----|:-----|:-----|
+|Apple USB XHCI|837D940F 0F839704 0000|837D941A 90909090 9090|
+|Apple USB XHCI|837D880F 0F83A704 0000|837D880F 90909090 9090|
+|iOkitUSBFamily|83FB0F0F|83FB3F0F|
+|iOkitUSBFamily|83E30FD3|83E33FD3|
+|Driver USB Apple USB XHCI|83F90F0F|83F93F3F|
+|Driver USB Apple USB XHCI|83FB0F0F|83FB3F3F|
+|Driver USB Apple USB XHCI|83FF0F0F|83FF3F3F|
+
+##### Configuration in 'config.plist'
+```diff
+      <key>KernelAndKextPatches</key>
+      <dict>
+      ...
+            <key>KernelAndKextPatches</key>
+            <array>
+               <dict>
++                   /*add here*/
+               </dict>
+            </array>
+	<dict>
+```
+```diff
+!     Please convert 'HEX' to 'BASE64' code by 'Hackintool' before patch
+      ...
+      <dict>
+            <key>Comment</key>
+            <string>USB Port limit patch 10.14.x modify by DalianSky(credits PMheart)</string>
+            <key>Disabled</key>
+            <false/>
+            <key>Find</key>
+!           <data>g/sPDw==</data>
+            <key>InfoPlistPatch</key>
+!           <false/>
+            <key>Name</key>
+            <string>com.apple.driver.usb.AppleUSBXHCI</string>
+            <key>Replace</key>
+!           <data>g/s/Dw==</data>
+      </dict>
+      ...
+````
+* **100 or 200 series mother board**
+```diff
+!       Please serarch by yourself
+```
+
+#### Custom_Active_USB_Ports
+```diff
+           1.Open 'Hackintool'
+           2.Select 'USB' item
+           3.Find USB ports marked with color'Green'
+           4.Insert your Boot Device to find port Name
+!          USB 3.0 Port will be settled to 'SS XX'
+!          USB 2.0 Port will be settled to 'HS XX'
+!          Onboard USB device,please change its connector to internal
+!          Mouse and keyboard device,please change its connector to internal
+-          USB Port doesn't include 'USB-C' Connector
+```
+![custom USB port](./EFI/APPLE/Patch/14.png)
+* ```example```
+
+|Port Name|Connector|Connect Device|Device speed|Remarks|
+|:-----|:-----|:-----|:-----|:-----|
+|SS01|USB3|USB Flash Disk|5.0Gbps|USB Flash Disk|
+|HS05|Internal|Keyboard|12Mbps|Your Keyboard|
+|HS06|Internal|Bluetooth|12Mbps|Bluetooth onboard|
+|HS10|USB2|USB Flash Disk2|480Mbps|USB Flash Disk|
+
+```diff
+            5.Press '一' button to delect unuse port
+            6.Press '->' button to extract custom file
+            7.Mount your 'EFI' partition
+            8.Delect 'USBInjectAll.kext' in /Clover/kext/Other
+            9.Add 'USBPort.kext' to /Clover/kext/Other
+```
+### CPU
+* ```Check CPU turbo```
+```
+            1.Download 'Intel Power Gadget'
+```
+[**Intel Power Gadget**](https://pan.baidu.com/s/1NDmy3ue7GSeyMRwNu9_ZGQ)  
+**Code: 1dzu**
+```diff
+            2.Open it
+!           error may occur
+-           your computer auto restart or display dump error
++           copy 'EmuVariableUefi.efi' from "/Clover/driver/off" to "/Clover/driver/UEFI"
++           change a previous version
+            3.If there is abnormal in Graph of 'CPU Frequency',you need turbo patch
+-           Don't use 'CPU-S' utility,it's not suitable for 'Skylake+' generation CPUs
+-           Also 'CPU-S' can make conflict with 'Intel Power Gadget'
+```
+### CPU_SSDT
+```diff
+            1.Download 'one-key-CPUFriend'
+!           you MUST refer 'README' 
+            2.follow the 'README' guide
+            3.Copy 'CPUFriend.kext' to /Clover/kext/Other
+```
+[one-key-CPUFriend](https://github.com/stevezhengshiqi/one-key-cpufriend)
+
+
 
