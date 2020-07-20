@@ -396,7 +396,7 @@ __Code: 07hv__
 #### File-tree(clover)
 >___Clover___
 >>___ACPI___
->>>***origin***  (for origin SSDT and DSDT files)  
+>>>***origin***  (for origin SSDT and DSDT files,press 'F4' when Clover Boot Menu display)  
 >>>***patched***  (for modified SSDT and DSDT files)  
 
 >>***drivers***
@@ -447,15 +447,15 @@ _Tip:_
 ```example patch```
 ```
       <key>Comment</key>
-            <string>_STA  to XSTA</string>
-            <key>Disabled</key>                          #disabled the patch
-            <false/>          
-            <key>Find</key>
-            <data>X1NUQQ==</data>
-            <key>Replace</key>
-            <data>WFNUQQ==</data>
-            <key>TgtBridge</key>
-            <data>UlRDXw==</data>
+      <string>_STA  to XSTA</string>
+      <key>Disabled</key>                          #disabled the patch
+      <false/>          
+      <key>Find</key>
+      <data>X1NUQQ==</data>
+      <key>Replace</key>
+      <data>WFNUQQ==</data>
+      <key>TgtBridge</key>
+      <data>UlRDXw==</data>
 ```
 #### While loading
 ```diff
@@ -469,7 +469,7 @@ _Tip:_
 -     4.display 'Deny' signal
 +     replace your .efi file in /Clover/EFI/drivers/UEFI
 ```
-#### while installing
+#### While installing
 ```diff
 +    1.Choose 'Disk Utilities'
 +    2.Show all volumes
@@ -492,6 +492,30 @@ _Tip:_
 **Other error,please refer:**  
 [**error while installation**](https://blog.daliansky.net/Common-problems-and-solutions-in-macOS-Catalina-10.15-installation.html)
 
+#### After installation
+* ```mount 'EFI' volume```
+```      
+      1.Choose the mount your install MacOS
+      2.Press 'mount partition' in EFI volume
+      3.Input your Mac's password and Open partition
+      4.Copy Clover/ to EFI volume
+```
+![write boot file](./EFI/APPLE/Diskpartition/12.png)
+
+* ```Add boot item```
+```
+     1.Download 'EasyUEFI Pro'
+```
+[**EasyUEFI Pro**](https://pan.baidu.com/s/1VLMBP_YboaYfYxk2oJ8y6A)  
+__Code: 75nw__
+```
+      2.Choose 'Manage UEFI boot items'
+      3.Press '+' to add item
+      4.OS type select 'Linux and other OS'
+      5.Input 'Clover' as describition
+      6.Choose 'EFI/Clover/CLOVERX64.efi' as file path
+      7.Change boot item priority
+```
 ## **Patch**
 ### **Graphic-Card**
 #### iGPU  
@@ -724,7 +748,7 @@ you can also change the value in 'config.plist'
 !          Mouse and keyboard device,please change its connector to internal
 -          USB Port doesn't include 'USB-C' Connector
 ```
-![custom USB port](./EFI/APPLE/Patch/14.png)
+![custom USB port](./EFI/APPLE/Patch/4.png)
 * ```example```
 
 |Port Name|Connector|Connect Device|Device speed|Remarks|
@@ -741,7 +765,7 @@ you can also change the value in 'config.plist'
             8.Delect 'USBInjectAll.kext' in /Clover/kext/Other
             9.Add 'USBPort.kext' to /Clover/kext/Other
 ```
-### CPU
+### **CPU**
 * ```Check CPU turbo```
 ```
             1.Download 'Intel Power Gadget'
@@ -768,4 +792,114 @@ you can also change the value in 'config.plist'
 [one-key-CPUFriend](https://github.com/stevezhengshiqi/one-key-cpufriend)
 
 
+## **DSDT and SSDT**
+### __DSDT__
+* ```collect DSDT and SSDT file```
+```diff
+            1.Press 'F4' when display 'Clover Boot Options'
+            2.Mount 'EFI' volume
+            3.Find file in '/Clover/ACPI/origin
+```
+* ```prepare complier utilities```
+```diff
+            1.Download and Decompress 'MaciASL' and copy it to /usr/Applications
+            2.Use 'MaciASL' open *.aml file
+-           Don't use MaciASL complie AML files,it may cause error
+            3.Download 'iasl' complier
+            4.copy 'iasl' to '/usr/bin'
+-           if it displays permission deny:
+!           you can complier it on Windows
+```
+[__MaciASL__](https://pan.baidu.com/s/10bcCwChZKalwVr0uH8w_Yg)  
+__Code: fkgr__
+[__iASL__](https://pan.baidu.com/s/1SQyHmCLr8shcfuNuer96aA)
+__Code: bi5g__  
+```diff
+-           decomplier *.aml file as below
++           iasl -dl *.aml(for Skylate or Skylate+ processor)
++           iasl -dl -da *.aml
+            5.get '*.dsl' file
+            6.Use textline tool open it(such as Vim,EditPlus)
++           iasl *.dsl
+            7.Check for error notice
++           8.Use 'iasl *.dsl' to recomplier
+```
+              
+#### Repair Sleep
+```diff
+!           solve wake immediately after select 'sleep' option 
+            1.Open 'Terminal'
+            2.type 'log show --start 'YYYY-MM-DD HH:MM:SS' --end 'YYYY-MM-DD HH:MM:SS' | grep 'Wake reason'
+!           --start and --end represent the time you want to get log
+!           3.if terminal displays: YYYY-MM-DD HH:MM:SS Wake reason: XHI ...etc.
+            3.Open DSDT.dsl
+            4.Search for 'XHI ...' which displays in terminal
+            5.find Method(_PRW) 
 
++           if Method(_PRW) code as below:
+
+```diff
+!           0x6D or 0x6D depends on your original DSDT file
+            Method (_PRW, 0, NotSerialized)  // _PRW: Power Resources for Wake
+            {
+-               Return (GPRW (0x6D, 0x04))
+            }
+```
+replace it:
+```diff
+            Method (_PRW, 0, NotSerialized)  // _PRW: Power Resources for Wake
+            {
++               Return (GPRW (0x09, 0x04))
+            }
+```
+```diff
+            6.Sleep and check for 'Wake reason' again
+!           if the 'Wake reason' same as before,replace code as below:
+```
+```diff
+            Method (_PRW, 0, NotSerialized)  // _PRW: Power Resources for Wake
+            {
+-               Return (GPRW (0x6D, 0x00))
+            }
+-           You can't wake by USB deivces(such as USB-Mouse)anymore
+```
+```         9.Use 'iasl' complier modified '*.dsl'
+            10.Copy to /Clover/ACPI/patched/
+```
+### __SSDT__
+#### Repair brightness on laptops
+```diff
+            1.Decomplier 'SSDT-*.aml' with iasl
+-           Don't decomplier 'SSDT-x0/x1...' .aml,you can delete them
+            2.Complier 'SSDT-*.aml' again and check for error
+            3.Use 'MaciASL' Open 'SSDT-*.aml'
+            4.Choose 'Patch'
+            5.Find correct Patch in 'Patch list'
+            6.Click 'Apply'
+            7.Save to *.aml file
+!           in 'config.plist':
+```diff
+      <key>ACPI</key>
+      <dict>
+            ...
+            <key><SSDT></key>
+            <array>
+                  <key>DropOem</key>
++      		<true/>                    #drop OEM_SSDT
+                  ...
+            <array>
+            ...
+            <key>SortedOrder</key>
+		<array>
++                 /ssdt-file list/
+            <array>
+            ...
+      </dict>
+!           please rename your custom SSDT file as order
+!           SSDT-0,SSDT-1...
+```
+* ```example```
+```diff               
++           <string>SSDT-1.aml</string>
+```
+                 
