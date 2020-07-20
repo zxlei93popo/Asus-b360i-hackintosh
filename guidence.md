@@ -480,7 +480,8 @@ _Tip:_
 -    error may occur:
 -    Installation stop running at the last 2 minutes
 +    disconnect from Internet
-+    replace 'AptioMemoryFix.efi' with 'OsxAptioFixDrv.efi' or 'OsxAptioFixDrv3.efi' 
++    replace 'AptioMemoryFix.efi' with 'OsxAptioFixDrv.efi' or 'OsxAptioFixDrv3.efi'
++    or change your flash disk 
 ```
 * _Tips_:
 ```diff
