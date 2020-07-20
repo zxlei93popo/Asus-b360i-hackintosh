@@ -689,6 +689,7 @@ you can also change the value in 'config.plist'
 #### __Open_USB_port_limits__
 ```from 15 to more than 26 ports(MacOS 10.13.6+)```
 * **300 series motherboard**  
+
 |Patch Name|Find|Replace|
 |:-----|:-----|:-----|
 |Apple USB XHCI|837D940F 0F839704 0000|837D941A 90909090 9090|
@@ -757,6 +758,7 @@ you can also change the value in 'config.plist'
 |HS05|Internal|Keyboard|12Mbps|Your Keyboard|
 |HS06|Internal|Bluetooth|12Mbps|Bluetooth onboard|
 |HS10|USB2|USB Flash Disk2|480Mbps|USB Flash Disk|
+
 
 ```diff
             5.Press '一' button to delect unuse port
