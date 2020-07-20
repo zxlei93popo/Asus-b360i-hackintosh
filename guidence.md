@@ -791,7 +791,69 @@ you can also change the value in 'config.plist'
 ```
 [one-key-CPUFriend](https://github.com/stevezhengshiqi/one-key-cpufriend)
 
+### Other feature
+#### Inject_SmUUID_ROM_CustomUUID
+```diff
+-           if you can't sign in iMessage,please check your '3-codes'
+            1.Open 'Clover Configuration'
+            2.Choose 'Machine Settings'
+            3.Locate in system option
+```
+```diff
++           1.'serial-number' option, press generate new
++           2.check it on 'Apple.Inc' website,if the result is a invalid serial-number,do next step
++           3.'smUUID' option,press generate new
+            4.Choose 'ROM Settings'
+            5.Press 'generate'
+            6.Copy 'MLB' in textline to 'MLB' option next to the 'ROM' option
+            7.Copy 'SmUUID' in textline
+            8.Choose 'Variable Settings
+            9.Paste 'SmUUID' in 'Custom UUID' option
+            10.Save 'config.plist'
+!           you can also refer as below:
+```
+[__Hackintosh Inject SmUUID ROM CustomUUID__](https://www.bilibili.com/video/BV19i4y1x768?from=search&seid=18408673921607091745)
 
+### iMessage and Facetime
+```diff
+!           if you can't sign in iMessage or Facetime,please follow advices as below:
+```
+* ```Empty Nvram```
+```diff
+            1.Use 'Hackintool'
+!           2.Reflash your BIOS
+```
+* ```Check your 'ROM' and 'Board-id'```
+```diff
+            1.Open 'Hackintool'
+!           if it displays '???' in 'ROM' and 'Board-id',please check it in 'config.plist' first
++           locate to 'config.plist'
+```diff
+      <key>RtVariables</key>
+	<dict>
+            ...
+            <key>ROM</key>
+!		<data>XXXXXXXXXXXX</data>
+-           if the value is empty,please inject as steps again
++           check for board-id
+
+      </dict>
+      ...
+      <key>SMBIOS</key>
+      <dict>
+            ...
+            <<key>Board-ID</key>
+!           <string>Mac-AA95B1DDAB278B95</string>>
+      </dict>
+-           if the value is empty,please inject as steps again
+```
+* ```Replace EFI file```
+```diff
+-           please BACKUP your EFI folder BEFORE next step
+-           'OsxAptioFixDrv.efi' may cause clover can't load 'ROM' and 'Board-id' data from 'config.plist'
++           replace 'OsxAptioFixDrv.efi' with 'ApitoMemoryFix.efi'
+```
+```
 ## **DSDT and SSDT**
 ### __DSDT__
 * ```collect DSDT and SSDT file```
