@@ -55,7 +55,8 @@
 * [DSDT & SSDT](#DSDT-and-SSDT)
   * [DSDT](#DSDT)
     * [Repair Sleep](#Repair-Sleep)
-  * [SSDT](#SSDT)(#Repair-brightness-on-laptops)
+  * [SSDT](#SSDT)
+    * [Repair Brightness on Laptop](#Repair-brightness-on-laptops)
 
 
 ## **BeforeStart**
