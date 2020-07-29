@@ -936,7 +936,7 @@ __Code: bi5g__
             5.find Method(_PRW) 
 
 +           if Method(_PRW) code as below:
-
+```
 ```diff
 !           0x6D or 0x6D depends on your original DSDT file
             Method (_PRW, 0, NotSerialized)  // _PRW: Power Resources for Wake
