@@ -723,7 +723,7 @@ you can also change the value in 'config.plist'
 ```
 #### __Open_USB_port_limits__
 ```from 15 to more than 26 ports(MacOS 10.13.6+)```
-* ```**300 series motherboard**```
+* ```300 series motherboard```
 
 |Patch Name|Find|Replace|
 |:-----|:-----|:-----|
@@ -865,6 +865,7 @@ you can also change the value in 'config.plist'
             1.Open 'Hackintool'
 !           if it displays '???' in 'ROM' and 'Board-id',please check it in 'config.plist' first
 +           locate to 'config.plist'
+```
 ```diff
       <key>RtVariables</key>
 	<dict>
