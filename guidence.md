@@ -978,6 +978,7 @@ replace it:
             6.Click 'Apply'
             7.Save to *.aml file
 !           in 'config.plist':
+```
 ```diff
       <key>ACPI</key>
       <dict>
