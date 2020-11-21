@@ -986,14 +986,14 @@ replace it:
             <key><SSDT></key>
             <array>
                   <key>DropOem</key>
-+      		<true/>                    #drop OEM_SSDT
++      			<true/>                    #drop OEM_SSDT
                   ...
             <array>
             ...
             <key>SortedOrder</key>
 		<array>
 +                 /ssdt-file list/
-            <array>
+           	<array>
             ...
       </dict>
 !           please rename your custom SSDT file as order
