@@ -36,7 +36,7 @@
 * Sleep:
     - [x] ```Wake by USB devices```
     - [x] ```Wake by Power button```
-* Special Fuctions:
+* Features:
     - [x] ```AirDrop & Handoff```
     - [x] ```Facetime```
     ```diff
