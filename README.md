@@ -4,7 +4,7 @@
  * [README(中文版)](./README(中文版).md)
  * [Guidence](./guidence.md)
 ---
-## My DeviceInfo
+## DeviceInfo
     * CPU: Intel i5-9500 (6 Cores/6 Threads) 3.0Ghz  
     * Motherboard: Asus ROG b360i-gaming  
     * Memory: Kingston Fury RGB DDR4 2666 8Gx2  
@@ -12,7 +12,7 @@
     * Graphic card: Sapphire RX570 4GB itx (RX470D Golden Edition ITX Flash BIOS to RX570)  
     * WLAN & Bluetooth: Boardcom 943602CS with Bluetooth 4.2  
 ---
-## Fuctions
+## Features
 * CPU:
   * Intel i5 9500
     - [x] ```Turbo```
@@ -36,7 +36,7 @@
 * Sleep:
     - [x] ```Wake by USB devices```
     - [x] ```Wake by Power button```
-* Features:
+* Others:
     - [x] ```AirDrop & Handoff```
     - [x] ```Facetime```
     ```diff
