@@ -721,7 +721,7 @@ you can also change the value in 'config.plist'
 !      except most Z370 or Z390 motherboard,you need patch to kernel
 !      if you don't patch,MacOS'll not recognize your USB Host Controller
 ```
-#### __Open_USB_port_limits__
+#### __Disable_USB_port_limits__
 ```from 15 to more than 26 ports(MacOS 10.13.6+)```
 * ```300 series motherboard```
 

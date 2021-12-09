@@ -2,7 +2,7 @@
 ***
     99%完美的华硕b360i主板黑苹果
   * [README](./README.md)
-  * [教程](./教程.md)
+  * [安装指南](./安装指南.md)
 ***
 ## 我的设备信息
     * CPU: Intel i5-9500 (6 Cores/6 Threads) 3.0Ghz  
